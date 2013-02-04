@@ -1,0 +1,24 @@
+@import url(navi.css);
+
+body {
+    padding: 0px;
+    margin: 0;
+    font: 0.74em/1.5em Arial,sans-serif;
+    background: url("../images/bg_body.png") repeat scroll 0% 0% rgb(236, 236, 236);
+    color: rgb(102, 102, 102);
+}
+
+.wrapper {
+    width: 900px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+#container_1 {
+    border-top-left-radius: 10px 10px;
+	border-top-right-radius: 10px 10px;
+	background-color:red;
+	padding:5px;
+}
+
+
