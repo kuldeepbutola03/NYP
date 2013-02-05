@@ -40,6 +40,7 @@ else
 <html>
 <head>
   <link rel="stylesheet" type="text/css" href="styles/layout.css" />
+  <script src="js/jquery-1.9.0.min.js"></script>
 <script>
 function loadwebsite()
 {
