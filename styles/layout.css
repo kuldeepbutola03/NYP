@@ -1,24 +1,214 @@
-@import url(navi.css);
-
-body {
-    padding: 0px;
-    margin: 0;
-    font: 0.74em/1.5em Arial,sans-serif;
-    background: url("../images/bg_body.png") repeat scroll 0% 0% rgb(236, 236, 236);
-    color: rgb(102, 102, 102);
+*{
+	-webkit-transition-property:top,left,width,height;
+	-webkit-transition-duration:5s;
+	-moz-transition-property:top,left,width,height;
+	-moz-transition-duration:5s;
+	
+	-webkit-transition-property:opacity;
+	-webkit-transition-duration:5s;
+	-moz-transition-property:opacity;
+	-moz-transition-duration:5s;
+}
+body
+{
+margin:0px;padding:0px;
+}
+div#indexopen , div#indexwebsite
+{
+	background: -webkit-gradient(linear,left top, left bottom,from( #FF7519),to(#FFE0CC));
+	background: -moz-linear-gradient(top , #FF7519, #FFE0CC);
 }
 
-.wrapper {
-    width: 900px;
-    margin: 0 auto;
-    text-align: left;
-}
+div#indexopen 
+{
+	margin:0px;
+	padding:0px;
+	opacity:1;
+	height:100%;
+}  
+div#imageopen
+{
+	background:url('All India Trinamool Congress   Official Party Website   TMC Chairperson Mamata Banerjee   Trinamul.png') -75px 0px;
+	position:relative;
+	top:55px;
+	left:125px;
+	width:85%;height:85%;
+	border:1px solid gray; 
 
-#container_1 {
-    border-top-left-radius: 10px 10px;
-	border-top-right-radius: 10px 10px;
-	background-color:red;
+	border-radius:5px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+}
+div#regupdatesdiv
+{
 	padding:5px;
+	position:relative;
+	top:35px;
+	left:10px;
+	width:33%;height:12%;
+	border:1px solid gray;
+	color:#000;
+	
+	background-color:#996633;
+	opacity:0.8;
+	border-radius:5px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+}
+#submitregupdates
+{
+	height:30px;
+}
+div#enterWebsite , #submitregupdates
+{
+	border:0px;
+	border-radius:5px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	background: -webkit-gradient(linear,left top, left bottom,from( #0066FF),to(#99C2FF));
+	background: -moz-linear-gradient(top ,  #0066FF,#99C2FF);
+}
+div#enterWebsite:hover , #submitregupdates:hover
+{
+	background: -webkit-gradient(linear,left top, left bottom,from( #99FF33),to(#99C2FF));
+	background: -moz-linear-gradient(top , #99FF33,#99C2FF);
+}
+div#enterwebsite
+{
+	line-height:25px;
+	padding:5px;
+	position:relative;
+	top:400px;
+	left:850px;
+	width:200px;height:30px;
+	display:block; 
+	
+}
+div#emailregupdateshelp
+{
+	display:none;
 }
 
 
+
+div#indexwebsite
+{
+	display:none;
+	position:absolute;
+	top:0px;
+	left:50px;
+	width:90%;
+	height:1000px;
+	//border:1px solid red;
+	opacity:0;
+}
+/*
+div#indexwebsite:hover
+{
+	opacity:1;
+}
+*/
+
+div#indexwebsite div
+{
+	position:relative;
+	float:left;
+	margin-bottom:5px;
+}
+div#indexwebsite2
+{
+	margin:0px;padding:0px
+	width:99.8%;
+	height:100%;
+	
+}
+div#headerdiv
+{
+	border:1px solid gray;
+	display:none;
+	padding-left:2px
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:99.8%;height:30px;
+}
+div#imageheaderdiv
+{
+	border:1px solid gray;
+	padding-left:2px
+	top:35px;
+	left:0px;
+	width:99.8%;height:125px;
+}
+div#navmenudiv
+{
+	padding-left:2px;
+	top:-20px;
+	left:50px;
+	width:99.8%;height:30px;
+}
+div#newsflashdiv
+{
+border:1px solid gray;
+	padding-left:2px
+	left:0px;
+	width:70%;height:300px;
+	margin-right:12px;
+	margin-left:12px
+}
+div#joinformdiv
+{
+border:1px solid gray;
+	padding-left:2px
+	left:0px;
+	width:27.5%;height:300px;
+}
+div#footerdiv
+{
+border:1px solid gray;
+	padding-left:2px;
+	top:400px;
+	left:0px;
+	width:99.8%;height:40px;
+}
+
+
+/*--------------------------------------navMenu---------------------------*/
+ul.navMenu , ul.submenu
+{
+	margin:0px;
+	padding:0px;
+	list-style-type:none;
+}
+ul.navmenu li
+{
+	position:relative;
+	float:left;
+	width:125px;height:30px;
+}
+ul.navmenu > li
+{
+	border-right:2px solid gray;
+}
+
+ul.navmenu a
+{
+	display:block;
+	width:125px;height:30px;
+	text-decoration:none;
+	color:black;
+	margin-top:2px;
+	text-align:center;
+}
+ul.submenu a
+{
+	border:1px solid gray;
+}
+ul.submenu
+{
+	display:none;
+}
+ul.navmenu  li:hover ul.submenu
+{
+	display:block;
+}
