@@ -60,17 +60,42 @@ overflow-x:hidden;
 div#staticlinks
 {
 	position:fixed;
-	top:35px;
+	top:200px;
 	right:0px;
-	width:1%;height:80%;
+	width:3.5%;height:80%;
 	z-index:20;
-	border:1px solid gray;
+	
 	border-radius:5px;
 	-webkit-border-radius:5px;
 	-moz-border-radius:5px;
-	background-image:url('bg1.png');
-	opacity:0.5;
+	opacity:1;
 }
+div#thumbwrap {
+	margin:75px auto;
+	width:252px; height:252px;
+}
+.thumb {
+	float:left; 
+	position:relative;
+	margin:3px;
+}
+.thumb img { 
+	border:0 solid #000;
+	vertical-align:bottom;
+}
+.thumb:hover {
+	border:0; 
+	z-index:1;
+}
+.thumb span { 
+	position:absolute;
+	visibility:hidden;
+}
+.thumb:hover span { 
+	visibility:visible;
+	top:0px; right:0px; 
+}
+
 div#indexopen , div#indexwebsite
 {
 	background: -webkit-gradient(linear,left top, left bottom,from( #00cbac),to(#ffd672));
@@ -164,8 +189,10 @@ div#indexwebsite
 div#indexwebsite2
 {
 	position:relative;
-	margin-left:auto;margin-right:auto;padding:0px;
-	width:80%;
+	margin-left:auto;
+	margin-right:auto;
+	padding:0px;
+	width:85%;
 	height:100%;
 	
 }
@@ -196,11 +223,18 @@ div#imageheaderdiv
 	left:0px;
 	width:99.8%;height:300px;
 	//background-image:url('Party_Header.png');
+	border-radius:12px;
+	-webkit-border-radius:12px;
+	-moz-border-radius:12px;
+	-webkit-box-shadow:1px 2px 2px #888888 ;
 }
 div#imageheaderdiv img
 {
-	width:1081px;
-	height:302px;
+	width:100%;
+	height:100%;
+	border-radius:12px;
+	-webkit-border-radius:12px;
+	-moz-border-radius:12px;
 }
 div#navmenudiv
 {
@@ -215,6 +249,7 @@ div#navmenudiv
 	background: -webkit-gradient(linear,left top, left bottom,from( #005CE6),to(#005CE6));
 	background: -moz-linear-gradient(top , #005CE6,#005CE6);
 	width:98%;height:70px;
+	//overflow-x:hidden;
 }
 div#newsflashdiv
 {
@@ -239,7 +274,7 @@ div#footerdiv
 	padding-left:2px;
 	top:300px;
 	left:0px;
-	width:99.8%;height:20%;
+	width:99.8%;height:18.5%;
 	background-image:url('bg2.png');
 	opacity:1;
 }
@@ -257,8 +292,9 @@ div#footerdiv div li
 	list-style-type:none;
 }
 
+
 /*--------------------------------------navMenu---------------------------*/
-ul.navMenu , ul.submenu ,ul.subsubmenu
+ul.navMenu ,ul.submenu ,ul.subsubmenu
 {
 	margin:0px;
 	padding:0px;
@@ -275,9 +311,9 @@ ul.navmenu li
 }
 ul.navmenu > li
 {
+	height:55px;
 	border-right:2px solid gray;
 }
-
 ul.navmenu a
 {
 	display:block;
@@ -306,14 +342,11 @@ ul.subsubmenu
 	top:-47px;
 	left:200px;
 }
-ul.subsubmenu >li
-{
-	padding-top:12px;
-}
 ul.subsubmenu li
 {
 	padding-left:5px;
 }
+
 ul.submenu , ul.subsubmenu
 {
 	display:none;
@@ -332,6 +365,10 @@ ul.navmenu  ul.submenu li:hover ul.subsubmenu
 
 </style>
 <script>
+function resize()
+{
+	
+}
 function loadwebsite()
 {
 	document.getElementById('indexopen').style.display="none";
@@ -379,10 +416,17 @@ function mouseCoord(e)
 </script>
 </head>
 
-<body>
+<body onresize="resize();">
 <div id="staticlinks">
+</div><div id="staticlinks">
+<a class="thumb" href="https://www.facebook.com/" target="_blank"><img src="facebook.png"><span><img src="icon\60 X 60\facebook.png" alt=""></span></a>
+<a class="thumb" href="https://www.twitter.com/" target="_blank"><img src="twitter.png"><span><img src="icon\60 X 60\twitter.png" alt=""></span></a>
+<a class="thumb" href="https://www.youtube.com/" target="_blank"><img src="youtube.png"><span><img src="icon\60 X 60\youtube.png" alt=""></span></a>
+<a class="thumb" href="https://www.youtube.com/" target="_blank"><img src="feed.png"><span><img src="icon\60 X 60\feed.png" alt=""></span></a>
+<a class="thumb" href="https://www.google.com/" target="_blank"><img src="google.png"><span><img src="icon\60 X 60\google.png" alt=""></span></a>
 
 </div>
+
 <div id="indexopen" >
 	<div id="imageopen">
 		<div id="regupdatesdiv">
@@ -415,7 +459,7 @@ function mouseCoord(e)
 			<li><a href="#">About</a></li>
 			<li><a href="#">Our Agenda&nbsp;&#8595;</a>
 				<ul class="submenu">
-					<li><a href="#">General</a></li>
+					<li style="padding-top:5px;"><a href="#">General</a></li>
 					<li><a href="#">Youth</a></li>
 					<li><a href="#">Deprived Section</a></li>
 					<li><a href="#">Common Man</a></li>
@@ -423,7 +467,7 @@ function mouseCoord(e)
 			</li>
 			<li><a href="#">Organistion&nbsp;&#8595;</a>
 				<ul class="submenu">
-					<li><a href="#">News and Stories</a></li>
+					<li ><a href="#">News and Stories</a></li>
 					<li><a href="#">News and Stories</a></li>
 					<li><a href="#">News and Stories</a></li>
 					<li><a href="#">News</a></li>
@@ -431,7 +475,7 @@ function mouseCoord(e)
 			</li>
 			<li><a href="#">Centres&nbsp;&#8595;</a>
 				<ul class="submenu">
-					<li><a href="#">North India</a>
+					<li ><a href="#">North India</a>
 						<ul class="subsubmenu">
 							<li><a href="#">Jammu & Kashmir</a></li>
 							<li><a href="#">Himachal Pradesh</a></li>
