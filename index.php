@@ -36,14 +36,16 @@ else
 	echo mysql_error();
 }
 ?>
-
+<!DOCTYPE html>
 <html>
 <head>
 <title>National Youth Party</title>
-<link rel="stylesheet" type="text/css" href="./css/indexlayout.css" />
-<style>
-
-</style>
+  <link rel="stylesheet" type="text/css" href="styles/layout.css" />
+  <link href="themes/2/js-image-slider.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" type="text/css" href="styles/nivo-slider.css" />
+  <link rel="stylesheet" type="text/css" href="styles/default.css" />
+    <script src="themes/2/js-image-slider.js" type="text/javascript"></script>
+	<script src="js/jquery-1.9.0.min.js" type="text/javascript"></script>
 <script>
 function resize()
 {
@@ -101,11 +103,11 @@ function mouseCoord(e)
 <body onresize="resize();">
 <div id="staticlinks">
 </div><div id="staticlinks">
-<a class="thumb" href="https://www.facebook.com/" target="_blank"><img src="./images/facebook.png"><span><img src="icon\60 X 60\facebook.png" alt=""></span></a>
-<a class="thumb" href="https://www.twitter.com/" target="_blank"><img src="./images/twitter.png"><span><img src="icon\60 X 60\twitter.png" alt=""></span></a>
-<a class="thumb" href="https://www.youtube.com/" target="_blank"><img src="./images/youtube.png"><span><img src="icon\60 X 60\youtube.png" alt=""></span></a>
-<a class="thumb" href="https://www.youtube.com/" target="_blank"><img src="./images/feed.png"><span><img src="icon\60 X 60\feed.png" alt=""></span></a>
-<a class="thumb" href="https://www.google.com/" target="_blank"><img src="./images/google.png"><span><img src="icon\60 X 60\google.png" alt=""></span></a>
+<a class="thumb" href="https://www.facebook.com/" target="_blank"><img src="images/48/facebook.png"><span><img src="images/60/facebook.png" alt=""></span></a>
+<a class="thumb" href="https://www.twitter.com/" target="_blank"><img src="images/48/twitter.png"><span><img src="images/60/twitter.png" alt=""></span></a>
+<a class="thumb" href="https://www.youtube.com/" target="_blank"><img src="images/48/youtube.png"><span><img src="images/60/youtube.png" alt=""></span></a>
+<a class="thumb" href="https://www.youtube.com/" target="_blank"><img src="images/48/feed.png"><span><img src="images/60/feed.png" alt=""></span></a>
+<a class="thumb" href="https://www.google.com/" target="_blank"><img src="images/48/google.png"><span><img src="images/60/google.png" alt=""></span></a>
 
 </div>
 
@@ -129,13 +131,13 @@ function mouseCoord(e)
 </div>
 <div id="indexwebsite">
 	<div id="indexwebsite2">
-		<div id="headerdiv">
+		<div id="headerdiv" class="relative">
 		header div
 		</div>
-		<div id="imageheaderdiv"> 
+		<div id="imageheaderdiv" class="relative"> 
 		<img src="./images/Party_Header.png">
 		</div>
-		<div id="navmenudiv" style="z-index:10">
+		<div id="navmenudiv" style="z-index:10" class="relative">
 		<ul class="navmenu">
 			<li><a href="#">Home</a></li>
 			<li><a href="#">About</a></li>
@@ -213,13 +215,36 @@ function mouseCoord(e)
 		</ul>
 		
 		</div>
-		<div id="newsflashdiv">
-		news
+		<div id="newsflashdiv" class="relative">
+		 <!-- jQuery & Nivo Slider -->
+         <script src="js/jquery-1.9.0.min.js"></script>
+         <script src="js/jquery.nivo.slider.js"></script>
+		 
+		 <script>
+	       $(window).load(function() {
+		   $('#slider').nivoSlider();
+	     });
+         </script>
+		 <div class="slider-wrapper futurico-theme">
+
+	     <div class="slider-wrapper theme-default">
+            <div id="slider" class="nivoSlider">
+                <img src="images/slider/slide1.jpg" data-thumb="images/slider/slide1.jpg" alt="" />
+                <a href="http://dev7studios.com"><img src="images/slider/slide2.jpg" data-thumb="images/slider/slide2.jpg" alt="" title="This is an example of a caption" /></a>
+                <img src="images/slider/slide3.jpg" data-thumb="images/slider/slide3.jpg" alt="" data-transition="slideInLeft" />
+                <img src="images/slider/slide4.jpg" data-thumb="images/slider/slide4.jpg" alt="" title="#htmlcaption" />
+            </div>
+            <div id="htmlcaption" class="nivo-html-caption">
+                <strong>This</strong> is an example of a <em>HTML</em> caption with <a href="#">a link</a>. 
+            </div>
+        </div>
+
+        </div>
 		</div>
-		<div id="joinformdiv">
+		<div id="joinformdiv" class="relative">
 		joinform
 		</div>
-		<div id="footerdiv">
+		<div id="footerdiv" class="relative">
 			<div >
 				<span style="color:#FFFFCC;text-align:center;position:relative;width:99%;display:block;">AGENDA</span>
 				<ul>
