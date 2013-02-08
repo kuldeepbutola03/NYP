@@ -47,11 +47,11 @@ function mouseCoord(e)
 		</div>
 		<div id="navmenudiv" style="z-index:10">
 		<ul class="navmenu">
-			<li><a href="#">Home</a></li>
+			<li style="border-left:2px solid gray;"><a href="#">Home</a></li>
 			<li><a href="#">About</a></li>
 			<li><a href="#">Our Agenda&nbsp;&#8595;</a>
 				<ul class="submenu">
-					<li style="padding-top:5px;"><a href="#">General</a></li>
+					<li style="padding-top:1.16em;line-height:2.5em;"><a href="#">General</a></li>
 					<li><a href="#">Youth</a></li>
 					<li><a href="#">Deprived Section</a></li>
 					<li><a href="#">Common Man</a></li>
@@ -59,7 +59,7 @@ function mouseCoord(e)
 			</li>
 			<li><a href="#">Organistion&nbsp;&#8595;</a>
 				<ul class="submenu">
-					<li ><a href="#">News and Stories</a></li>
+					<li style="padding-top:1.16em;line-height:2.5em;"><a href="#">News and Stories</a></li>
 					<li><a href="#">News and Stories</a></li>
 					<li><a href="#">News and Stories</a></li>
 					<li><a href="#">News</a></li>
@@ -67,7 +67,7 @@ function mouseCoord(e)
 			</li>
 			<li><a href="#">Centres&nbsp;&#8595;</a>
 				<ul class="submenu">
-					<li ><a href="#">North India</a>
+					<li style="padding-top:1.16em;line-height:2.5em;"><a href="#">North India</a>
 						<ul class="subsubmenu">
 							<li><a href="#">Jammu & Kashmir</a></li>
 							<li><a href="#">Himachal Pradesh</a></li>

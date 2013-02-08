@@ -124,20 +124,20 @@ div#imageheaderdiv img
 }
 div#navmenudiv
 {
-	padding:0px;
-	padding-top:20px;
-	padding-left:0px;
+	padding:0;margin:0;
+	padding-top:1.4em;
+	padding-bottom:1.4em;
+	padding-left:1.4em;
 	top:-20px;
 	left:10px;
 	border-radius:5px;
 	-webkit-border-radius:5px;
 	-moz-border-radius:5px;
-	background: -webkit-gradient(linear,left top, left bottom,from( #005CE6),to(#005CE6));
+	background: #005CE6;
 	background: -moz-linear-gradient(top , #005CE6,#005CE6);
-	width:98%;height:70px;
+	width:97.5%;height:50px;
 	//overflow-x:hidden;
 }
-
 div#footerdiv
 {
 	padding-top:5px;
@@ -165,71 +165,73 @@ div#footerdiv div li
 
 
 /*--------------------------------------navMenu---------------------------*/
-ul.navMenu ,ul.submenu ,ul.subsubmenu
+ul.navmenu ,ul.submenu, ul.subsubmenu
 {
-	margin:0px;
-	padding:0px;
 	list-style-type:none;
+	margin:0;padding:0;
 }
 ul.navmenu li
 {
-	//outline:1px solid green;
+	//outline:1px solid green; 
 	position:relative;
 	float:left;
-	width:128px;height:45px;
-	line-height:40px;
-	
+	display:block;
+	width:8em;
+	height:3.4em;
 }
 ul.navmenu > li
 {
-	height:55px;
 	border-right:2px solid gray;
 }
 ul.navmenu a
 {
 	display:block;
-	width:125px;height:45px;
+	width:8em;
+	height:3.4em;
+	background: #005CE6;
+	background: -moz-linear-gradient(top , #005CE6,#005CE6);
+	text-decoration:none;
 	text-decoration:none;
 	color:white;
-	font-family:"Constantia",Serif;
+	font-family:"Constantia", Serif;
 	font-weight:bold;
-	margin-top:3px;
 	text-align:center;
+	line-height:3.4em;
 }
 ul.submenu a
 {
-	width:200px;
-	background: -webkit-gradient(linear,left top, left bottom,from( #005CE6),to(#005CE6));
-	background: -moz-linear-gradient(top , #005CE6,#005CE6);
-	border-top:1px solid gray;
-	border-radius:5px;
-	margin-top:3px;
-	-webkit-border-radius:5px;
-	-moz-border-radius:5px;
-}
-ul.subsubmenu 
-{
-	position:relative;
-	top:-47px;
-	left:200px;
+	width:12em;
+	border-radius:2em;
+	-webkit-border-radius:0.4em;
+	-moz-border-radius:0.4em;
 }
 ul.subsubmenu li
 {
-	padding-left:5px;
+	left:12.1em;
+	top:-3.4em;
+}
+ul.navmenu li:hover a 
+{
+	background-color:blue;
+}
+ul.navmenu li:hover li 
+{
+	background-color:blue;
 }
 
 ul.submenu , ul.subsubmenu
 {
 	display:none;
 }
-ul.navmenu  li:hover ul.submenu
+
+ul.navmenu li:hover .submenu
+{
+	display:block;
+}
+ul.submenu li:hover .subsubmenu
 {
 	display:block;
 }
 
-ul.navmenu  ul.submenu li:hover ul.subsubmenu
-{
-	display:block;
-}
 
 /*--------------------------------------navMenu---------------------------*/
