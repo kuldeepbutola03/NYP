@@ -43,7 +43,7 @@ else
 <link rel="stylesheet" type="text/css" href="css/indexlayout.css" />
 <link rel="stylesheet" type="text/css" href="css/slider.css" />
 <script src="js/js-image-slider.js" type="text/javascript"></script>
-
+<script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
 <script>
 function loadwebsite()
 {
@@ -101,6 +101,19 @@ function resize()
 	document.getElementById('navmenudiv').style.width= (80/100)*screen.width+"%";
 }
 </script>
+<script>
+  $(document).ready( function(){
+    $(".submenu").hide();
+    $(".menu").hover(
+	  function(){
+	    $(".submenu", this).animate({ height: 'show',width:'show', opacity: 'show' }, 'slow');
+	  }, function(){
+	    $(".submenu", this).animate({ height: 'hide',width:'show', opacity: 'hide' }, 'slow');
+	  }
+	);
+  }
+  );
+</script>
 </head>
 
 <body ">
@@ -143,9 +156,9 @@ function resize()
 		</div>
 		<div id="navmenudiv" onresize="resize();" style="z-index:10;">
 		<ul class="navmenu">
-			<li style="border-left:2px solid gray;"><a href="#">Home</a></li>
-			<li><a href="#">About</a></li>
-			<li><a href="#">Our Agenda&nbsp;<span style="font-size:0.8em;">&#x25BC;</span></a>
+			<li class="menu" style="border-left:2px solid gray;"><a href="#">Home</a></li>
+			<li class="menu"><a href="#">About</a></li>
+			<li class="menu"><a href="#">Our Agenda&nbsp;<span style="font-size:0.8em;">&#x25BC;</span></a>
 				<ul class="submenu">
 					<li style="padding-top:1.16em;line-height:2.5em;" class="submenufirst"><a href="#">General</a></li>
 					<li><a href="#">Youth</a></li>
@@ -153,7 +166,7 @@ function resize()
 					<li><a href="#">Common Man</a></li>
 				</ul>
 			</li>
-			<li><a href="#">Organistion&nbsp;<span style="font-size:0.8em;">&#x25BC;</span></a>
+			<li class="menu"><a href="#">Organistion&nbsp;<span style="font-size:0.8em;">&#x25BC;</span></a>
 				<ul class="submenu">
 					<li style="padding-top:1.16em;line-height:2.5em;" class="submenufirst"><a href="#">News and Stories</a></li>
 					<li><a href="#">News and Stories</a></li>
@@ -161,7 +174,7 @@ function resize()
 					<li><a href="#">News</a></li>
 				</ul>
 			</li>
-			<li><a href="#">Centres&nbsp;<span style="font-size:0.8em;">&#x25BC;</span></a>
+			<li class="menu"><a href="#">Centres&nbsp;<span style="font-size:0.8em;">&#x25BC;</span></a>
 				<ul class="submenu">
 					<li style="padding-top:1.16em;line-height:2.5em;" class="submenufirst"><a href="#">North India</a>
 						<ul class="subsubmenu">
@@ -213,9 +226,9 @@ function resize()
 					</li>
 				</ul>
 			</li>
-			<li><a href="#">News</a></li>
-			<li><a href="#">Gallery</a></li>
-			<li><a href="#">Contact Us</a></li>
+			<li class="menu"><a href="#">News</a></li>
+			<li class="menu"><a href="#">Gallery</a></li>
+			<li class="menu"><a href="#">Contact Us</a></li>
 		</ul>
 		
 		</div>
