@@ -40,8 +40,8 @@ else
 <html>
 <head>
 <title>National Youth Party</title>
-<link rel="stylesheet" type="text/css" href="./css/indexlayout.css" />
-<link href="css/slider.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="css/indexlayout.css" />
+<link rel="stylesheet" type="text/css" href="css/slider.css" />
 <script src="js/js-image-slider.js" type="text/javascript"></script>
 
 <script>
@@ -108,9 +108,9 @@ function resize()
 </div><div id="staticlinks">
 <a class="thumb" href="https://www.facebook.com/" target="_blank"><img src="./images/facebook.png"><span><img src="images/60/facebook.png" alt=""></span></a>
 <a class="thumb" href="https://www.twitter.com/" target="_blank"><img src="./images/twitter.png"><span><img src="images/60/twitter.png" alt=""></span></a>
-<a class="thumb" href="https://www.youtube.com/" target="_blank"><img src="./images/youtube.png"><span><img src="images/60\youtube.png" alt=""></span></a>
-<a class="thumb" href="https://www.youtube.com/" target="_blank"><img src="./images/feed.png"><span><img src="images/60\feed.png" alt=""></span></a>
-<a class="thumb" href="https://www.google.com/" target="_blank"><img src="./images/google.png"><span><img src="images/a60\google.png" alt=""></span></a>
+<a class="thumb" href="https://www.youtube.com/" target="_blank"><img src="./images/youtube.png"><span><img src="images/60/youtube.png" alt=""></span></a>
+<a class="thumb" href="https://www.youtube.com/" target="_blank"><img src="./images/feed.png"><span><img src="images/60/feed.png" alt=""></span></a>
+<a class="thumb" href="https://www.google.com/" target="_blank"><img src="./images/google.png"><span><img src="images/60/google.png" alt=""></span></a>
 
 </div>
 
