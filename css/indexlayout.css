@@ -368,6 +368,9 @@ ul.submenu a
 	-webkit-border-radius:0.4em;
 	-moz-border-radius:0.4em;
 }
+ul.fix {
+  width:12em;
+}
 ul.submenu li
 {
 	padding-top:3px;

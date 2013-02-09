@@ -106,9 +106,9 @@ function resize()
     $(".submenu").hide();
     $(".menu").hover(
 	  function(){
-	    $(".submenu", this).animate({ height: 'show',width:'show', opacity: 'show' }, 'slow');
+	    $(".fix", this).animate({ height: 'show',width:'show', opacity: 'show' }, 'slow');
 	  }, function(){
-	    $(".submenu", this).animate({ height: 'hide',width:'show', opacity: 'hide' }, 'slow');
+	    $(".fix", this).animate({ height: 'hide',width:'show', opacity: 'hide' }, 'fast');
 	  }
 	);
   }
@@ -159,7 +159,7 @@ function resize()
 			<li class="menu" style="border-left:2px solid gray;"><a href="#">Home</a></li>
 			<li class="menu"><a href="#">About</a></li>
 			<li class="menu"><a href="#">Our Agenda&nbsp;<span style="font-size:0.8em;">&#x25BC;</span></a>
-				<ul class="submenu">
+				<ul class="submenu fix">
 					<li style="padding-top:1.16em;line-height:2.5em;" class="submenufirst"><a href="#">General</a></li>
 					<li><a href="#">Youth</a></li>
 					<li><a href="#">Deprived Section</a></li>
@@ -167,7 +167,7 @@ function resize()
 				</ul>
 			</li>
 			<li class="menu"><a href="#">Organistion&nbsp;<span style="font-size:0.8em;">&#x25BC;</span></a>
-				<ul class="submenu">
+				<ul class="submenu fix">
 					<li style="padding-top:1.16em;line-height:2.5em;" class="submenufirst"><a href="#">News and Stories</a></li>
 					<li><a href="#">News and Stories</a></li>
 					<li><a href="#">News and Stories</a></li>
@@ -175,7 +175,7 @@ function resize()
 				</ul>
 			</li>
 			<li class="menu"><a href="#">Centres&nbsp;<span style="font-size:0.8em;">&#x25BC;</span></a>
-				<ul class="submenu">
+				<ul class="submenu fix">
 					<li style="padding-top:1.16em;line-height:2.5em;" class="submenufirst"><a href="#">North India</a>
 						<ul class="subsubmenu">
 							<li><a href="#">Jammu & Kashmir</a></li>
