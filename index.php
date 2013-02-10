@@ -1,5 +1,7 @@
 <?php
 
+@$http_referer = $_SERVER['HTTP_REFERER'];
+
 if(mysql_connect("localhost","root","") && mysql_select_db("nyp"))
 {
 	if(isset($_POST['emailregupdates']))
@@ -30,11 +32,81 @@ if(mysql_connect("localhost","root","") && mysql_select_db("nyp"))
 		}
 	}
 	
+	if(isset($_POST['namequestion'])&&isset($_POST['emailquestion'])&&isset($_POST['question']))
+	{
+		$namequestion=$_POST['namequestion'];
+		$emailquestion=$_POST['emailquestion'];
+		$question=$_POST['question'];
+		if(!empty($namequestion)&&!empty($emailquestion)&&!empty($question))
+		{
+			$query="INSERT INTO askaquestion VALUES('NULL','".$namequestion."','".$emailquestion."','".$question."')";
+			if(mysql_query($query))
+			{
+			
+			}
+			else
+			{
+				mysql_error();
+			}
+		}
+	}
+	if(isset($_POST['nameidea'])&&isset($_POST['emailidea'])&&isset($_POST['idea']))
+	{
+		$nameidea=$_POST['nameidea'];
+		$emailidea=$_POST['emailidea'];
+		$idea=$_POST['idea'];
+		if(!empty($nameidea)&&!empty($emailidea)&&!empty($idea))
+		{
+			$query="INSERT INTO idea VALUES('NULL','".$nameidea."','".$emailidea."','".$idea."')";
+			if(mysql_query($query))
+			{}
+			else
+			{
+				mysql_error();
+			}
+		}
+	}
+	if(isset($_POST['namefile'])&&isset($_POST['emailfile']))
+	{
+		echo "in1";
+		$namefile=$_POST['namefile'];
+		$emailfile=$_POST['emailfile'];
+		$file=$_FILES['file']["name"];
+		$details=$_POST['details'];
+		if(!empty($namefile)&&!empty($emailfile)&&!empty($file))
+		{
+			$query="INSERT INTO file VALUES('NULL','".$namefile."','".$emailfile."','".$file."','".$details."')";
+			if(mysql_query($query))
+			{
+			if($_FILES["file"]["error"]>0)
+			{
+				echo "error";
+			}
+			else
+			{
+				if (file_exists("uploads/" . $_FILES["file"]["name"]))
+				{
+					echo $_FILES["file"]["name"] . " already exists. ";
+				}
+				else
+				{
+					move_uploaded_file($_FILES["file"]["tmp_name"],
+					"uploads/" . $_FILES["file"]["name"]);
+					echo "Stored in: " . "upload/" . $_FILES["file"]["name"];
+				}
+			}
+			}
+			else
+			{mysql_error();}
+		}
+		
+	}
 }
 else
 {
 	echo mysql_error();
 }
+
 ?>
 
 <html>
@@ -45,6 +117,7 @@ else
 <script src="js/js-image-slider.js" type="text/javascript"></script>
 <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
 <script>
+
 function loadwebsite()
 {
 	document.getElementById('indexopen').style.display="none";
@@ -92,13 +165,33 @@ function mouseCoord(e)
 	
 }
 
-if(screen.width<=1300)
+if(window.innerWidth<=1300 &&window.innerWidth>=1100 )
 {
-	document.body.transform="scale(0.5)";
+	document.body.zoom="90%";
 }
-function resize()
+function getinvoledcontentselect(id)
 {
-	document.getElementById('navmenudiv').style.width= (80/100)*screen.width+"%";
+	if(id=="raiseyourvoicediv")
+	{
+		
+		document.getElementById('raiseyourvoicediv').style.display="block";
+		document.getElementById('writetousdiv').style.display="none";
+		document.getElementById('telecommunicationdiv').style.display="none";
+	}
+	if(id=="writetousdiv")
+	{
+		
+		document.getElementById('raiseyourvoicediv').style.display="none";
+		document.getElementById('writetousdiv').style.display="block";
+		document.getElementById('telecommunicationdiv').style.display="none";
+	}
+	if(id=="telecommunicationdiv")
+	{
+		
+		document.getElementById('raiseyourvoicediv').style.display="none";
+		document.getElementById('writetousdiv').style.display="none";
+		document.getElementById('telecommunicationdiv').style.display="block";
+	}
 }
 </script>
 <script>
@@ -106,7 +199,7 @@ function resize()
     $(".submenu").hide();
     $(".menu").hover(
 	  function(){
-	    $(".fix", this).animate({ height: 'show',width:'show', opacity: 'show' }, 'slow');
+	     $(".fix", this).animate({ height: 'show',width:'show', opacity: 'show' }, 'slow');
 	  }, function(){
 	    $(".fix", this).animate({ height: 'hide',width:'show', opacity: 'hide' }, 'fast');
 	  }
@@ -116,7 +209,7 @@ function resize()
 </script>
 </head>
 
-<body ">
+<body >
 <div id="staticlinks">
 </div><div id="staticlinks">
 <a class="thumb" href="https://www.facebook.com/" target="_blank"><img src="./images/facebook.png"><span><img src="images/60/facebook.png" alt=""></span></a>
@@ -135,7 +228,7 @@ function resize()
 		<label for="emailredupdates">Please Enter your valid email address for constant updates from our party :<br></label>
 		<input type="text" name="emailregupdates" id="emailregupdates" />
 		<input type="submit" name="submitregupdates" id="submitregupdates" value="Add to our Mailling List" />
-		<form>
+		</form>
 		<div id="emailregupdateshelp">
 		invalid email entered
 		</div>
@@ -154,7 +247,7 @@ function resize()
 		<div id="imageheaderdiv"> 
 		<img src="./images/Party_Header.png">
 		</div>
-		<div id="navmenudiv" onresize="resize();" style="z-index:10;">
+		<div id="navmenudiv"  style="z-index:10;">
 		<ul class="navmenu">
 			<li class="menu" style="border-left:2px solid gray;"><a href="#">Home</a></li>
 			<li class="menu"><a href="#">About</a></li>
@@ -254,57 +347,65 @@ function resize()
 		<a href="#" onclick="joinform();">joinform</a>
 		</div>
 		<div id="getinvolveddiv">
-			<div id="getinvolvednavmenudiv">
-			<ul class="getinvolvednavmenu">
-				<li><a href="#" onclick="getinvoledcontentselect('raiseyourvoicediv');">Raise your Voice</a></li>
-				<li><a href="#" onclick="getinvoledcontentselect('socialnetworkdiv');">Social Networking</a></li>
-				<li><a href="#" onclick="getinvoledcontentselect('writetousdiv');">Write to Us</a></li>
-				<li><a href="#" onclick="getinvoledcontentselect('whatyoucandodiv');">What you can do</a></li>
-				<li><a href="#" onclick="getinvoledcontentselect('reportyouractivitydiv');">Report your activity</a></li>
-			</ul>
-			
-			</div>
 			<div id="getinvolvedcontentdiv">
 				<div id="raiseyourvoicediv">
-					<div id="raiseyourvoicediv1">
-					<img src="images/question.png" style="float:left;"/>
-					<p>Ask A Question</p>
-					<form action="index.php" method="post" onsubmit="return raiseyourvoicediv1check();">
-						<table>
-							<tr><td>Name</td><td><input type="text" name="namequestion" /></td></tr>
-							<tr><td>Email id</td><td><input type="text" name="emailquestion" /></td></tr>
-							<tr><td>Name</td><td><textarea rows="5" cols="15" name="namequestion"></textarea></td></tr>
-						</table>
-					<input type="submit" value="Submit"/>
-					</form>
-					</div>
+
 					<div id="raiseyourvoicediv2">
 					<img src="images/bright-idea.png" style="float:left;" />
 					<p>&nbsp;&nbsp;&nbsp;&nbsp;Share Ideas</p>
-					<form action="index.php" method="post" onsubmit="return raiseyourvoicediv2check();">
+					<form action="index.php" method="post" >
 						<table>
-							<tr><td>Name</td><td><input type="text" name="nameideas" /></td></tr>
-							<tr><td>Email id</td><td><input type="text" name="emailideas" /></td></tr>
-							<tr><td>Ideas</td><td><textarea rows="5" cols="15" name="ideas"></textarea></td></tr>
+							<tr><td>Name</td><td><input type="text" name="nameidea" /></td></tr>
+							<tr><td>Email id</td><td><input type="text" name="emailidea" /></td></tr>
+							<tr><td>Ideas</td><td><textarea rows="5" cols="15" name="idea"></textarea></td></tr>
+						</table>
+					<input type="submit" value="Submit" />
+					</form>
+					</div>
+					
+					<div id="raiseyourvoicediv1">
+					<img src="images/question.png" style="float:left;" />
+					<p>Ask a Question</p>
+					<form action="index.php" method="POST" >
+						<table>
+							<tr><td>Name</td><td><input type="text" name="namequestion" /></td></tr>
+							<tr><td>Email id</td><td><input type="text" name="emailquestion" /></td></tr>
+							<tr><td>Question</td><td><textarea rows="5" cols="15" name="question"></textarea></td></tr>
 						</table>
 					<input type="submit" value="Submit"/>
 					</form>
 					</div>
+					
 					<div id="raiseyourvoicediv3" style="border:0px;">
 					<img src="images/Documents-icon.png" style="float:left;"/>
 					<p>&nbsp;&nbsp;&nbsp;&nbsp;Share Documents</p>
-					<form action="index.php" method="post" onsubmit="return raiseyourvoicediv3check();">
+					<form action="index.php" method="post" enctype="multipart/form-data">
 						<table>
 							<tr><td>Name</td><td><input type="text" name="namefile" /></td></tr>
 							<tr><td>Email id</td><td><input type="text" name="emailfile" /></td></tr>
-							<tr><td>File</td><td><input type="file" name="file" /></td></tr>
+							<tr><td>File</td><td><input type="file" name="file" id="file" /></td></tr>
 							<tr><td>Details</td><td><textarea rows="5" cols="15" name="details"></textarea></td></tr>
 						</table>
 					<input type="submit" value="Submit"/>
 					</form>
 					</div>
 				</div>
+				<div id="writetousdiv">
+					<center>You can write to us at:___________________________________</center>
+				</div>
+				<div id="telecommunicationdiv">
+					
+				</div>
 			</div>
+			<div id="getinvolvednavmenudiv">
+			<ul class="getinvolvednavmenu">
+				<li onclick="getinvoledcontentselect('raiseyourvoicediv');">Raise your Voice</li>
+				<li onclick="getinvoledcontentselect('writetousdiv');">Write to Us</li>
+				<li onclick="getinvoledcontentselect('telecommunicationdiv');">Telecommunication</li>
+			</ul>
+			
+			</div>
+			
 		</div>
 		
 		
@@ -314,7 +415,7 @@ function resize()
 		<div id="footerdiv">
 		<img src="images/Footer.png" />
 			<div >
-				<span style="color:black;text-align:center;position:relative;width:99%;display:block;">AGENDA</span>
+				<span style="color:black;position:relative;width:99%;display:block;">AGENDA</span>
 				<ul>
 					<li>Jan lokpal</li>
 					<li>Right to reject</li>
@@ -325,7 +426,7 @@ function resize()
 				</ul>
 			</div>
 			<div>
-				<span style="color:black;text-align:center;position:relative;width:99%;display:block;">OFFFICE BEARERS</span>
+				<span style="color:black;position:relative;width:99%;display:block;">OFFFICE BEARERS</span>
 				<ul>
 					<li>Arvind Kejriwal</li>
 					<li>Arvind Kejriwal</li>
@@ -336,7 +437,7 @@ function resize()
 				</ul>
 			</div>
 			<div>
-				<span style="color:black;text-align:center;position:relative;width:99%;display:block;">AGENDA</span>
+				<span style="color:black;position:relative;width:99%;display:block;">AGENDA</span>
 				<ul>
 					<li>Arvind Kejriwal</li>
 					<li>Arvind Kejriwal</li>
@@ -349,6 +450,24 @@ function resize()
 		</div>
 	</div>
 </div>
+
+<?php
+if($http_referer=="http://localhost/nyp/index.php")
+{
+?>
+<script>
+loadsecond();
+function loadsecond()
+{
+	document.getElementById('indexopen').style.display="none";
+	document.getElementById('indexwebsite').style.display="block";
+	document.getElementById('indexwebsite').style.opacity="1";
+}
+</script>
+<?php
+}
+?>
+
 </body>
 
 
