@@ -108,7 +108,7 @@ else
 }
 
 ?>
-
+<!DOCTYPE html>
 <html>
 <head>
 <title>National Youth Party</title>
@@ -171,9 +171,9 @@ if(window.innerWidth<=1300 &&window.innerWidth>=1100 )
 }
 function getinvoledcontentselect(id)
 {
+    
 	if(id=="raiseyourvoicediv")
 	{
-		
 		document.getElementById('raiseyourvoicediv').style.display="block";
 		document.getElementById('writetousdiv').style.display="none";
 		document.getElementById('telecommunicationdiv').style.display="none";
@@ -193,7 +193,15 @@ function getinvoledcontentselect(id)
 		document.getElementById('telecommunicationdiv').style.display="block";
 	}
 }
+
+function joinParty(){
+    document.getElementById('indexopen').style.display="none";
+	document.getElementById('indexwebsite').style.display="block";
+	document.getElementById('joinParty').style.display="block";
+	document.getElementById('joinParty').style.opacity="1";
+}
 </script>
+<!-- jQuery -->
 <script>
   $(document).ready( function(){
     $(".submenu").hide();
@@ -206,20 +214,31 @@ function getinvoledcontentselect(id)
 	);
   }
   );
+  
+  $(document).ready(
+    function(){
+	  $('.thumb').hover(
+	    function(){
+		  $("img", this).animate({height: '60px' , width:'60px', position:'absolute'}, 'fast');
+		}, function(){
+		  $("img", this).animate({height: '48px', width: '48px'}, 'fast');
+		}
+	  );
+	}
+  );
 </script>
 </head>
 
 <body >
 <div id="staticlinks">
-</div><div id="staticlinks">
-<a class="thumb" href="https://www.facebook.com/" target="_blank"><img src="./images/facebook.png"><span><img src="images/60/facebook.png" alt=""></span></a>
-<a class="thumb" href="https://www.twitter.com/" target="_blank"><img src="./images/twitter.png"><span><img src="images/60/twitter.png" alt=""></span></a>
-<a class="thumb" href="https://www.youtube.com/" target="_blank"><img src="./images/youtube.png"><span><img src="images/60/youtube.png" alt=""></span></a>
-<a class="thumb" href="https://www.youtube.com/" target="_blank"><img src="./images/feed.png"><span><img src="images/60/feed.png" alt=""></span></a>
-<a class="thumb" href="https://www.google.com/" target="_blank"><img src="./images/google.png"><span><img src="images/60/google.png" alt=""></span></a>
+<a class="thumb" href="https://www.facebook.com/" target="_blank"><div class="sIfix"><img src="images/facebook.png"/></div></a>
+<a class="thumb" href="https://www.twitter.com/" target="_blank"><img src="images/60/twitter.png" /></a>
+<a class="thumb" href="https://www.youtube.com/" target="_blank"><img src="images/60/youtube.png" /></a>
+<a class="thumb" href="https://www.youtube.com/" target="_blank"><img src="images/60/feed.png" /></a>
+<a class="thumb" href="https://www.google.com/" target="_blank"><img src="images/60/google.png" /></a>
 
 </div>
-
+<!-- Splash Screen  -->
 <div id="indexopen" >
 	<div id="imageopen">
 		<div id="regupdatesdiv">
@@ -238,6 +257,13 @@ function getinvoledcontentselect(id)
 	</div>
 
 </div>
+<!-- Join Party Div -->
+<div id="joinParty">
+    <fieldset id="formJoinParty">
+	    <legend>Join Our Party</legend>
+	</fieldset>
+</div>
+<!-- Main Site -->
 <div id="indexwebsite">
 	<div id="indexwebsite2" >
 	
@@ -344,7 +370,14 @@ function getinvoledcontentselect(id)
 
 		</div>
 		<div id="joinformdiv">
-		<a href="#" onclick="joinform();">joinform</a>
+		  <center>
+		     <input type="text" placeholder="Name"/><br>
+		     <input type="radio" id="sex" value="male" />Male  <input type="radio" name="sex" value="female" />Female<br>
+             <input type="text" id="age" placeholder="Age"/><br>		 
+			 <input type="text" id="email" placeholder="Email" /><br>
+			 <input type="text" id="pno" placeholder="Phone Number" /><br>
+			 <input type="button" id="memberSubmit" onclick=joinParty() value="Submit"/>
+		  </center>
 		</div>
 		<div id="getinvolveddiv">
 			<div id="getinvolvedcontentdiv">
@@ -358,6 +391,7 @@ function getinvoledcontentselect(id)
 							<tr><td>Name</td><td><input type="text" name="nameidea" /></td></tr>
 							<tr><td>Email id</td><td><input type="text" name="emailidea" /></td></tr>
 							<tr><td>Ideas</td><td><textarea rows="5" cols="15" name="idea"></textarea></td></tr>
+							
 						</table>
 					<input type="submit" value="Submit" />
 					</form>
