@@ -117,6 +117,7 @@ $xml = simplexml_load_file("news.xml")
 <title>National Youth Party</title>
 <link rel="stylesheet" type="text/css" href="css/indexlayout.css" />
 <link rel="stylesheet" type="text/css" href="css/slider.css" />
+<link rel="stylesheet" type="text/css" href="css/form.css" />
 <script src="js/js-image-slider.js" type="text/javascript"></script>
 <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
 <script>
@@ -210,18 +211,82 @@ function getinvoledcontentselect(id)
 	);
   }
   );
+  
+  $(document).ready(
+    function(){
+	  $('.thumb').hover(
+	    function(){
+		  $("img", this).animate({height: '60px' , width:'60px', position:'absolute'}, 'fast');
+		}, function(){
+		  $("img", this).animate({height: '48px', width: '48px'}, 'fast');
+		}
+	  );
+	}
+  );
+</script>
+<script>
+  function joinForm(){
+    $('#form').show();
+	 $.ajaxSetup({
+             url: "ajax/form.php"
+          });
+     $.ajax( {
+	         
+             success:function(data) {
+                $('#form').html(data);
+				$("#age, #number").keyup(
+	              function(){
+		            if(!($.isNumeric($('#age, #number').val())) && $('#age, #number').val() != ""){
+					  alert("Please enter numbers only!");
+					}
+	              }
+	            );
+             }
+          });
+     
+  }
+  
+  function formClose(){
+    $('#form').hide();
+  }
+  
+  function submitForm(){
+     if($('.elements input').val() == "" ){
+	   alert("Please fill all the fields!");
+	 }
+	 else if($('#captcha').val() != "HUMAN" ){
+	   alert("Please enter the correct captcha!");
+	 }
+	 else{
+	   $.post("ajax/submit.php",{ name: $('#name').val(), fName: $('#fName').val(),sex: $('#sex').val(),age: $('#age').val(),address: $('#address').val(),state: $('#state').val(),district: $('#district').val(),number: $('#number').val() },
+            function(data){
+			    
+                $('fieldset').html(data);
+            }, "html");
+	 }
+	 
+  }
+  
+  
+    
+  
 </script>
 </head>
 
 <body >
+<div id="form">
+  <a href="#" id="formClose" onclick="formClose()" >Close</a>
+  sdfasdf
+</div> 
+<div class="right">
 <div id="staticlinks">
-</div><div id="staticlinks">
-<a class="thumb" href="https://www.facebook.com/" target="_blank"><img src="./images/facebook.png"><span><img src="images/60/facebook.png" alt=""></span></a>
-<a class="thumb" href="https://www.twitter.com/" target="_blank"><img src="./images/twitter.png"><span><img src="images/60/twitter.png" alt=""></span></a>
-<a class="thumb" href="https://www.youtube.com/" target="_blank"><img src="./images/youtube.png"><span><img src="images/60/youtube.png" alt=""></span></a>
-<a class="thumb" href="https://www.youtube.com/" target="_blank"><img src="./images/feed.png"><span><img src="images/60/feed.png" alt=""></span></a>
-<a class="thumb" href="https://www.google.com/" target="_blank"><img src="./images/google.png"><span><img src="images/60/google.png" alt=""></span></a>
+<a class="thumb" href="https://www.facebook.com/" target="_blank"><div class="sIfix"><img src="images/60/facebook.png"/></div></a>
+<a class="thumb" href="https://www.twitter.com/" target="_blank"><img src="images/60/twitter.png" /></a>
+<a class="thumb" href="https://www.youtube.com/" target="_blank"><img src="images/60/youtube.png" /></a>
+<a class="thumb" href="https://www.youtube.com/" target="_blank"><img src="images/60/feed.png" /></a>
+<a class="thumb" href="https://www.google.com/" target="_blank"><img src="images/60/google.png" /></a>
 
+</div>
 </div>
 
 <div id="indexopen" >
@@ -350,7 +415,7 @@ function getinvoledcontentselect(id)
 
 		</div>
 		<div id="joinformdiv">
-		<a href="#" onclick="joinform();">joinform</a>
+		<a href="#" id="openForm" onclick="joinForm();">joinform</a>
 		</div>
 		<div id="getinvolveddiv">
 			<div id="getinvolvedcontentdiv">

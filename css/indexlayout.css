@@ -3,11 +3,14 @@ body
 margin:0px;padding:0px;
 overflow-x:hidden;
 }
+.center{
+margin-left:auto;
+margin-right:auto;
+}
 div#staticlinks
 {
-	position:fixed;
-	top:200px;
-	right:0px;
+    position:fixed;
+	right:0;
 	width:3.5% ;
 	height:80% ;
 	z-index:20;
@@ -29,18 +32,8 @@ div#thumbwrap {
 .thumb img { 
 	border:0px solid #000;
 	vertical-align:bottom;
-}
-.thumb:hover {
-	border:0; 
-	z-index:1;
-}
-.thumb span { 
-	position:absolute;
-	visibility:hidden;
-}
-.thumb:hover span { 
-	visibility:visible;
-	top:0px; right:0px; 
+	width:48px;
+	height:48px;
 }
 
 div#indexopen , div#indexwebsite , body
