@@ -1,6 +1,5 @@
-<?
-include '../connection.php';
-
+<?php
+include "../connection.php";
 $name = $_POST['name'];
 $fName= $_POST['fName'];
 $sex = $_POST['sex'];
@@ -9,7 +8,8 @@ $address = $_POST['address'];
 $state = $_POST['state'];
 $district = $_POST['district'];
 $number = $_POST['number'];
-
-$sql = "INSERT INTO submissions (name,sex,age,address,state,district,number,fName) VALUES ('$name','$fName','$sex','$address','$state','$district','$number')";
+echo $name;
+$sql = "INSERT INTO submissions (name,sex,age,address,state,district,number,fName,id) VALUES ('".$name."','".$sex."','".$age."','".$address."','".$state."','".$district."','".$number."','".$fName."',NULL)";
 mysql_query($sql);
+
 ?>

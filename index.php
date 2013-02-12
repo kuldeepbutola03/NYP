@@ -276,7 +276,6 @@ function getinvoledcontentselect(id)
 <body >
 <div id="form">
   <a href="#" id="formClose" onclick="formClose()" >Close</a>
-  sdfasdf
 </div> 
 <div class="right">
 <div id="staticlinks">
@@ -415,7 +414,7 @@ function getinvoledcontentselect(id)
 
 		</div>
 		<div id="joinformdiv">
-		<a href="#" id="openForm" onclick="joinForm();">joinform</a>
+		<p id="openForm" onclick="joinForm();">joinform</p>
 		</div>
 		<div id="getinvolveddiv">
 			<div id="getinvolvedcontentdiv">
