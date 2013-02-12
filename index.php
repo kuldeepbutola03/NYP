@@ -108,7 +108,10 @@ else
 }
 
 ?>
-<!DOCTYPE html>
+<?php
+$xml = simplexml_load_file("news.xml")
+?>
+
 <html>
 <head>
 <title>National Youth Party</title>
@@ -167,13 +170,14 @@ function mouseCoord(e)
 
 if(window.innerWidth<=1300 &&window.innerWidth>=1100 )
 {
+	alert("hey!");
 	document.body.zoom="90%";
 }
 function getinvoledcontentselect(id)
 {
-    
 	if(id=="raiseyourvoicediv")
 	{
+		
 		document.getElementById('raiseyourvoicediv').style.display="block";
 		document.getElementById('writetousdiv').style.display="none";
 		document.getElementById('telecommunicationdiv').style.display="none";
@@ -193,15 +197,7 @@ function getinvoledcontentselect(id)
 		document.getElementById('telecommunicationdiv').style.display="block";
 	}
 }
-
-function joinParty(){
-    document.getElementById('indexopen').style.display="none";
-	document.getElementById('indexwebsite').style.display="block";
-	document.getElementById('joinParty').style.display="block";
-	document.getElementById('joinParty').style.opacity="1";
-}
 </script>
-<!-- jQuery -->
 <script>
   $(document).ready( function(){
     $(".submenu").hide();
@@ -214,31 +210,20 @@ function joinParty(){
 	);
   }
   );
-  
-  $(document).ready(
-    function(){
-	  $('.thumb').hover(
-	    function(){
-		  $("img", this).animate({height: '60px' , width:'60px', position:'absolute'}, 'fast');
-		}, function(){
-		  $("img", this).animate({height: '48px', width: '48px'}, 'fast');
-		}
-	  );
-	}
-  );
 </script>
 </head>
 
 <body >
 <div id="staticlinks">
-<a class="thumb" href="https://www.facebook.com/" target="_blank"><div class="sIfix"><img src="images/facebook.png"/></div></a>
-<a class="thumb" href="https://www.twitter.com/" target="_blank"><img src="images/60/twitter.png" /></a>
-<a class="thumb" href="https://www.youtube.com/" target="_blank"><img src="images/60/youtube.png" /></a>
-<a class="thumb" href="https://www.youtube.com/" target="_blank"><img src="images/60/feed.png" /></a>
-<a class="thumb" href="https://www.google.com/" target="_blank"><img src="images/60/google.png" /></a>
+</div><div id="staticlinks">
+<a class="thumb" href="https://www.facebook.com/" target="_blank"><img src="./images/facebook.png"><span><img src="images/60/facebook.png" alt=""></span></a>
+<a class="thumb" href="https://www.twitter.com/" target="_blank"><img src="./images/twitter.png"><span><img src="images/60/twitter.png" alt=""></span></a>
+<a class="thumb" href="https://www.youtube.com/" target="_blank"><img src="./images/youtube.png"><span><img src="images/60/youtube.png" alt=""></span></a>
+<a class="thumb" href="https://www.youtube.com/" target="_blank"><img src="./images/feed.png"><span><img src="images/60/feed.png" alt=""></span></a>
+<a class="thumb" href="https://www.google.com/" target="_blank"><img src="./images/google.png"><span><img src="images/60/google.png" alt=""></span></a>
 
 </div>
-<!-- Splash Screen  -->
+
 <div id="indexopen" >
 	<div id="imageopen">
 		<div id="regupdatesdiv">
@@ -257,14 +242,9 @@ function joinParty(){
 	</div>
 
 </div>
-<!-- Join Party Div -->
-<div id="joinParty">
-    <fieldset id="formJoinParty">
-	    <legend>Join Our Party</legend>
-	</fieldset>
-</div>
-<!-- Main Site -->
 <div id="indexwebsite">
+	<div id="transparentskin">
+	</div>
 	<div id="indexwebsite2" >
 	
 		<div id="headerdiv">
@@ -370,14 +350,7 @@ function joinParty(){
 
 		</div>
 		<div id="joinformdiv">
-		  <center>
-		     <input type="text" placeholder="Name"/><br>
-		     <input type="radio" id="sex" value="male" />Male  <input type="radio" name="sex" value="female" />Female<br>
-             <input type="text" id="age" placeholder="Age"/><br>		 
-			 <input type="text" id="email" placeholder="Email" /><br>
-			 <input type="text" id="pno" placeholder="Phone Number" /><br>
-			 <input type="button" id="memberSubmit" onclick=joinParty() value="Submit"/>
-		  </center>
+		<a href="#" onclick="joinform();">joinform</a>
 		</div>
 		<div id="getinvolveddiv">
 			<div id="getinvolvedcontentdiv">
@@ -385,15 +358,14 @@ function joinParty(){
 
 					<div id="raiseyourvoicediv2">
 					<img src="images/bright-idea.png" style="float:left;" />
-					<p>&nbsp;&nbsp;&nbsp;&nbsp;Share Ideas</p>
+					<p style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Share Ideas</p>
 					<form action="index.php" method="post" >
-						<table>
+						<table align="center">
 							<tr><td>Name</td><td><input type="text" name="nameidea" /></td></tr>
 							<tr><td>Email id</td><td><input type="text" name="emailidea" /></td></tr>
-							<tr><td>Ideas</td><td><textarea rows="5" cols="15" name="idea"></textarea></td></tr>
-							
+							<tr><td>Ideas</td><td><textarea rows="5" cols="20" name="idea"></textarea></td></tr>
 						</table>
-					<input type="submit" value="Submit" />
+					<input type="submit" value="Submit" style="float:right;"/>
 					</form>
 					</div>
 					
@@ -401,26 +373,26 @@ function joinParty(){
 					<img src="images/question.png" style="float:left;" />
 					<p>Ask a Question</p>
 					<form action="index.php" method="POST" >
-						<table>
+						<table align="center">
 							<tr><td>Name</td><td><input type="text" name="namequestion" /></td></tr>
 							<tr><td>Email id</td><td><input type="text" name="emailquestion" /></td></tr>
-							<tr><td>Question</td><td><textarea rows="5" cols="15" name="question"></textarea></td></tr>
+							<tr><td>Question</td><td><textarea rows="5" cols="20" name="question"></textarea></td></tr>
 						</table>
-					<input type="submit" value="Submit"/>
+					<input type="submit" value="Submit" style="float:right;"/>
 					</form>
 					</div>
 					
 					<div id="raiseyourvoicediv3" style="border:0px;">
 					<img src="images/Documents-icon.png" style="float:left;"/>
-					<p>&nbsp;&nbsp;&nbsp;&nbsp;Share Documents</p>
+					<p>Share Documents</p>
 					<form action="index.php" method="post" enctype="multipart/form-data">
-						<table>
+						<table align="center">
 							<tr><td>Name</td><td><input type="text" name="namefile" /></td></tr>
 							<tr><td>Email id</td><td><input type="text" name="emailfile" /></td></tr>
 							<tr><td>File</td><td><input type="file" name="file" id="file" /></td></tr>
-							<tr><td>Details</td><td><textarea rows="5" cols="15" name="details"></textarea></td></tr>
+							<tr><td>Details</td><td><textarea rows="3" cols="20" name="details"></textarea></td></tr>
 						</table>
-					<input type="submit" value="Submit"/>
+					<input type="submit" value="Submit" style="float:right;"/>
 					</form>
 					</div>
 				</div>
@@ -441,10 +413,23 @@ function joinParty(){
 			</div>
 			
 		</div>
-		
-		
-		
-		
+		<div id="newsheader">
+		NEWS:
+		</div>
+		<div id="news">
+		<?php
+		foreach($xml->news as $news)
+		{
+		?>
+			<div>
+			<?php
+			echo "Dated: <span style='color:red;'>".$news->dated."</span> - ".$news->content;
+			?>
+			</div>
+		<?php
+		}
+		?>
+		</div>
 		
 		<div id="footerdiv">
 		<img src="images/Footer.png" />
