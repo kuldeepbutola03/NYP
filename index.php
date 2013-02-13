@@ -109,7 +109,7 @@ else
 
 ?>
 <?php
-$xml = simplexml_load_file("news.xml")
+$xml = simplexml_load_file("news.xml");
 ?>
 
 <html>
@@ -347,7 +347,7 @@ function getinvoledcontentselect(id)
 <div id="indexwebsite">
 	<div id="transparentskin">
 	</div>
-	<div id="indexwebsite2" >
+	<div id="indexwebsite2" class="shadow">
 	
 		<div id="headerdiv">
 		header div

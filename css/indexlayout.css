@@ -2,6 +2,7 @@ body
 {
 margin:0px;padding:0px;
 overflow-x:hidden;
+background: url("../images/bg-site.png") repeat scroll left top rgb(255, 255, 255);
 }
 .center{
 margin-left:auto;
@@ -11,6 +12,7 @@ div#staticlinks
 {
     position:fixed;
 	right:0;
+	top:25%;
 	width:3.5% ;
 	height:80% ;
 	z-index:20;
@@ -36,7 +38,13 @@ div#thumbwrap {
 	height:48px;
 }
 
-div#indexopen , div#indexwebsite 
+.shadow {
+  -moz-box-shadow:    3px 3px 5px 6px #ccc;
+  -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+  box-shadow:         3px 3px 5px 6px #ccc;
+}
+
+div#indexopen  
 {
 	background: -webkit-gradient(linear,left top, left bottom,from( #00cbac),to(#ffd672));
 	background: -moz-linear-gradient(top , #00cbac, #ffd672);
@@ -145,9 +153,6 @@ div#indexwebsite2
 	padding:0px;
 	width:85%;
 	height:100%;
-	//background:-webkit-gradient(linear,left top,left bottom,from(#feedcb),to(#ffffff));
-	background:-moz-linear-gradient(top,#feedcb,#ffffff);
-	//-webkit-box-shadow:2px 2px 2px #888888;
 }
 div#indexwebsite2 > div
 {
