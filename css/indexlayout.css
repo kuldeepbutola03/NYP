@@ -433,7 +433,7 @@ div#newsheader
 	line-height:3em;
 	font-weight:bold;
 	position:relative;
-	width:97.3%;height:3%;
+	width:60%;height:3%;
 	top:1em;
 	//border:1px solid gray;
 	border-radius:5px;
@@ -443,12 +443,13 @@ div#newsheader
 	background:-moz-linear-gradient(top , #FF9933,#FFAD5C);
 	
 }
+
 div#news
 {
 	margin-top:2em;
-	width:100%;
+	width:63%;
 	-webkit-marquee: up small infinite scroll normal;  
-	overflow-x: -webkit-marquee;  
+	overflow-x: -webkit-marquee;
 	//border:1px solid gray;
 }
 div#news div
@@ -460,8 +461,47 @@ div#news div
 	font-family:"Georgia",Serif;
 	font-weight:bold;
 }
-
-
+div#facebookfeedsheader
+{
+	padding-left:2em;
+	text-align:left;
+	font-family:"Georgia",Serif;
+	color:#006B00;
+	line-height:3em;
+	font-weight:bold;
+	position:relative;
+	width:34%;height:3%;
+	top:-2.3em;
+	//border:1px solid gray;
+	border-radius:5px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	background:-webkit-gradient(linear,left top, left bottom,from( #FF9933),to(#FFAD5C));
+	background:-moz-linear-gradient(top , #FF9933,#FFAD5C);
+}
+div#facebookfeeds
+{
+	//border:1px solid green;
+	width:36%;height:12%;
+	margin-left:0.3em;
+	top:-1.2em;
+	overflow:auto;
+}
+div#facebookfeeds div
+{
+	width:90%;
+	padding:0.5em;
+	border-bottom:1px solid gray;
+}
+div#facebookfeeds img
+{
+	width:33%;height:33%;	
+}
+.fb-like
+{
+	//border:1px solid green;
+	left:30%;
+}
 div#footerdiv
 {
 	padding-top:5px;
