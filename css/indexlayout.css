@@ -1,8 +1,7 @@
 body
 {
 margin:0px;padding:0px;
-background: -webkit-gradient(linear, left top, left bottom, from(#76cbdc), to(#ffffff));
-background: -moz-linear-gradient(top,  #76cbdc,  #ffffff);
+
 }
 .center{
 margin-left:auto;
@@ -27,9 +26,10 @@ div#thumbwrap {
 	width:252px; height:252px;
 }
 .thumb {
-	float:left; 
+	float:right; 
 	position:relative;
-	margin:3px;
+	margin-top:3px;
+	margin-bottom:3px;
 }
 .thumb img { 
 	border:0px solid #000;
@@ -129,10 +129,13 @@ div#indexwebsite
 	position:absolute;
 	top:0px;
 	left:0px;
-	width:1390px;
+	width:100%;
 	height:1620px;
 	//border:1px solid red;
 	opacity:0;
+	background: -webkit-gradient(linear, left top, left bottom, from(#76cbdc), to(#ffffff));
+background: -moz-linear-gradient(top,  #76cbdc,  #ffffff);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#76cbdc', endColorstr='#ffffff');
 	
 }
 div#transparentskin
@@ -274,14 +277,6 @@ ul.subsubmenu li
 	left:12.1em;
 	top:-2em;
 } 
-ul.navmenu li:hover a 
-{
-	background-color:blue;
-}
-ul.navmenu li:hover > li 
-{
-	background-color:blue;
-}
 ul.navmenu li:hover .submenufirst
 {
 	background-color:blue;

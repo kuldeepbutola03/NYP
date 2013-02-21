@@ -120,6 +120,7 @@ $xml = simplexml_load_file("news.xml")
 <link rel="stylesheet" type="text/css" href="css/form.css" />
 <script src="js/js-image-slider.js" type="text/javascript"></script>
 <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="js/jquery-ui-1.9.2.custom.min.js" type="text/javascript"></script>
 <script>
 
 function loadwebsite()
@@ -204,9 +205,11 @@ function getinvoledcontentselect(id)
     $(".submenu").hide();
     $(".menu").hover(
 	  function(){
+	     $("a", this).animate({ backgroundColor: 'blue'}, "slow");
 	     $(".fix", this).animate({ height: 'show',width:'show', opacity: 'show' }, 'slow');
 	  }, function(){
 	    $(".fix", this).animate({ height: 'hide',width:'show', opacity: 'hide' }, 'fast');
+		$("a", this).animate({ backgroundColor: '#005CE6'}, "slow");
 	  }
 	);
   }
@@ -266,10 +269,6 @@ function getinvoledcontentselect(id)
 	 }
 	 
   }
-  
-  
-    
-  
 </script>
 <script>
 <div id="fb-root"></div>
@@ -357,7 +356,7 @@ function getinvoledcontentselect(id)
 <div id="indexwebsite">
 	<div id="transparentskin">
 	</div>
-	<div id="indexwebsite2" class="shadow">
+	<div id="indexwebsite2">
 	
 		<div id="headerdiv">
 		header div
