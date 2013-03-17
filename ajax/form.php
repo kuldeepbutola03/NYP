@@ -1,10 +1,10 @@
-<a href="#" id="formClose" onclick="formClose()" >Close</a>
-
   <div class="registration_form">
+  
   <fieldset class="pro">
     <legend>Join Our Party</legend>
+	<a href="#" id="formClose" onclick="formClose()" ><img src="images/close.png" /></a>
 
-    <p id="topLine">It's free and always will be. <span style="background:#EAEAEA none repeat scroll 0 0;line-height:1;float:right;margin-right:10px;padding:5px 7px;">Already a member? <a href="../alumini/loginform.php">Log in</a></span> </p>
+    <p id="topLine">It's free and always will be.</p>
     
     <div class="elements">
       <label for="name">Name :</label>

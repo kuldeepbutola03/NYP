@@ -123,13 +123,6 @@ $xml = simplexml_load_file("news.xml")
 <script src="js/jquery-ui-1.9.2.custom.min.js" type="text/javascript"></script>
 <script>
 
-function loadwebsite()
-{
-	document.getElementById('indexopen').style.display="none";
-	document.getElementById('indexwebsite').style.display="block";
-	document.getElementById('indexwebsite').style.opacity="1";
-	
-}
 function regexcheckemail()
 {
 	email = document.getElementById('emailregupdates').value;
@@ -147,27 +140,6 @@ function regexcheckemail()
 		document.getElementById('regupdatesdiv').style.height="15%";
 		return false;
 	}
-}
-
-document.captureEvents(Event.MOUSEMOVE);
-document.onmousemove=mouseCoord;
-
-var mouseX,mouseY;
-function mouseCoord(e)
-{
-	mouseX=e.pageX;
-	mouseY=e.pageY;
-	
-	if(mouseY<=10)
-	{
-		document.getElementById('headerdiv').style.display="block";
-		
-	}
-	else if(mouseY>=50)
-	{
-		document.getElementById('headerdiv').style.display="none";
-	}
-	
 }
 
 if(window.innerWidth<=1300 &&window.innerWidth>=1100 )
@@ -205,11 +177,11 @@ function getinvoledcontentselect(id)
     $(".submenu").hide();
     $(".menu").hover(
 	  function(){
-	     $("a", this).animate({ backgroundColor: 'blue'}, "slow");
+	     //$("a", this).animate({ backgroundColor: 'blue'}, "slow");
 	     $(".fix", this).animate({ height: 'show',width:'show', opacity: 'show' }, 'slow');
 	  }, function(){
 	    $(".fix", this).animate({ height: 'hide',width:'show', opacity: 'hide' }, 'fast');
-		$("a", this).animate({ backgroundColor: '#005CE6'}, "slow");
+		//$("a", this).animate({ backgroundColor: '#005CE6'}, "slow");
 	  }
 	);
   }
@@ -230,6 +202,7 @@ function getinvoledcontentselect(id)
 <script>
   function joinForm(){
     $('#form').show();
+	$('#form').animate({opacity: 1 }, 'slow');
 	 $.ajaxSetup({
              url: "ajax/form.php"
           });
@@ -250,7 +223,9 @@ function getinvoledcontentselect(id)
   }
   
   function formClose(){
-    $('#form').hide();
+    $('#form').hide("slow", function(){
+	  $('#form').css('opacity', '0');
+	});
   }
   
   function submitForm(){
@@ -285,41 +260,6 @@ function getinvoledcontentselect(id)
 <body >
 <!----------------------------------------------------------------------------------------------->
 <div id="fb-root"></div>
-<script>
-  window.fbAsyncInit = function() {
-    // init the FB JS SDK
-    FB.init({
-      appId      : '205080116300204', // App ID from the App Dashboard
-      //channelUrl : '//WWW.YOUR_DOMAIN.COM/channel.html', // Channel File for x-domain communication
-      status     : true, // check the login status upon init?
-      cookie     : true, // set sessions cookies to allow your server to access the session?
-      xfbml      : true  // parse XFBML tags on this page?
-    });
-
-    // Additional initialization code such as adding Event Listeners goes here
-
-  };
-
-  // Load the SDK's source Asynchronously
-  // Note that the debug version is being actively developed and might 
-  // contain some type checks that are overly strict. 
-  // Please report such bugs using the bugs tool.
-  (function(d, debug){
-     var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement('script'); js.id = id; js.async = true;
-     js.src = "//connect.facebook.net/en_US/all" + (debug ? "/debug" : "") + ".js";
-     ref.parentNode.insertBefore(js, ref);
-   }(document, /*debug*/ false));
-</script>
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=205080116300204";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
 <!----------------------------------------------------------------------------------------------->
 <div id="form">
   <a href="#" id="formClose" onclick="formClose()" >Close</a>
@@ -333,37 +273,20 @@ function getinvoledcontentselect(id)
 <a class="thumb" href="https://www.google.com/" target="_blank"><img src="images/60/google.png" /></a>
 
 </div>
+<div id="leftPanel">
+  
+  <a href="#" ><img src="images/left/ask.png" /></a><br>
+  <a href="#" ><img src="images/left/share.png"/></a><br>
+  <a href="http://google.com"><img src="images/left/developer.png" alt="Developers"/></a>
 </div>
-
-<div id="indexopen" >
-	<div id="imageopen">
-		<div id="regupdatesdiv">
-		
-		<form  name="regupdatesform" onsubmit="return regexcheckemail();" action="index.php" method="post">
-		<label for="emailredupdates">Please Enter your valid email address for constant updates from our party :<br></label>
-		<input type="text" name="emailregupdates" id="emailregupdates" />
-		<input type="submit" name="submitregupdates" id="submitregupdates" value="Add to our Mailling List" />
-		</form>
-		<div id="emailregupdateshelp">
-		invalid email entered
-		</div>
-		</div>
-		
-		<div id="enterwebsite" onclick='loadwebsite();'><center>Enter Website </center></div>
-	</div>
-
 </div>
 <div id="indexwebsite">
-	<div id="transparentskin">
-	</div>
-	<div id="indexwebsite2">
+  <div id="imageheaderdiv" class="center"> 
+		<img src="./images/header.png">
+		</div>
+	<div id="indexwebsite2" style="background-color:#ffffff" class="center">
 	
-		<div id="headerdiv">
-		header div
-		</div>
-		<div id="imageheaderdiv"> 
-		<img src="./images/Party_Header.png">
-		</div>
+		
 		<div id="navmenudiv"  style="z-index:10;">
 		<ul class="navmenu">
 			<li class="menu" style="border-left:2px solid gray;"><a href="#">Home</a></li>
@@ -442,6 +365,7 @@ function getinvoledcontentselect(id)
 		</ul>
 		
 		</div>
+		
 		<div id="newsflashdiv">
 		  <div id="sliderFrame">
         <div id="ribbon"></div>
@@ -463,67 +387,7 @@ function getinvoledcontentselect(id)
 		<div id="joinformdiv">
 		<p id="openForm" onclick="joinForm();">joinform</p>
 		</div>
-		<div id="getinvolveddiv">
-			<div id="getinvolvedcontentdiv">
-				<div id="raiseyourvoicediv">
-
-					<div id="raiseyourvoicediv2">
-					<img src="images/bright-idea.png" style="float:left;" />
-					<p style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Share Ideas</p>
-					<form action="index.php" method="post" >
-						<table align="center">
-							<tr><td>Name</td><td><input type="text" name="nameidea" /></td></tr>
-							<tr><td>Email id</td><td><input type="text" name="emailidea" /></td></tr>
-							<tr><td>Ideas</td><td><textarea rows="5" cols="20" name="idea"></textarea></td></tr>
-						</table>
-					<input type="submit" value="Submit" style="float:right;"/>
-					</form>
-					</div>
-					
-					<div id="raiseyourvoicediv1">
-					<img src="images/question.png" style="float:left;" />
-					<p>Ask a Question</p>
-					<form action="index.php" method="POST" >
-						<table align="center">
-							<tr><td>Name</td><td><input type="text" name="namequestion" /></td></tr>
-							<tr><td>Email id</td><td><input type="text" name="emailquestion" /></td></tr>
-							<tr><td>Question</td><td><textarea rows="5" cols="20" name="question"></textarea></td></tr>
-						</table>
-					<input type="submit" value="Submit" style="float:right;"/>
-					</form>
-					</div>
-					
-					<div id="raiseyourvoicediv3" style="border:0px;">
-					<img src="images/Documents-icon.png" style="float:left;"/>
-					<p>Share Documents</p>
-					<form action="index.php" method="post" enctype="multipart/form-data">
-						<table align="center">
-							<tr><td>Name</td><td><input type="text" name="namefile" /></td></tr>
-							<tr><td>Email id</td><td><input type="text" name="emailfile" /></td></tr>
-							<tr><td>File</td><td><input type="file" name="file" id="file" /></td></tr>
-							<tr><td>Details</td><td><textarea rows="3" cols="20" name="details"></textarea></td></tr>
-						</table>
-					<input type="submit" value="Submit" style="float:right;"/>
-					</form>
-					</div>
-				</div>
-				<div id="writetousdiv">
-					<center>You can write to us at:___________________________________</center>
-				</div>
-				<div id="telecommunicationdiv">
-					
-				</div>
-			</div>
-			<div id="getinvolvednavmenudiv">
-			<ul class="getinvolvednavmenu">
-				<li onclick="getinvoledcontentselect('raiseyourvoicediv');">Raise your Voice</li>
-				<li onclick="getinvoledcontentselect('writetousdiv');">Write to Us</li>
-				<li onclick="getinvoledcontentselect('telecommunicationdiv');">Telecommunication</li>
-			</ul>
-			
-			</div>
-			
-		</div>
+		<div id="newsDiv">
 		<div id="newsheader">
 		NEWS:
 		</div>
@@ -542,16 +406,21 @@ function getinvoledcontentselect(id)
 		}
 		?>
 		</div>
+		</div>
 		
+		<div id="facebookDiv">
 		<div id="facebookfeedsheader">Facebook Page Feeds</div>
 		
 		<div id="facebookfeeds">
 			<div class="fb-like-box" data-href="https://www.facebook.com/nyp4india?sid=0.6628177239209799" data-width="400" data-height="300" data-show-faces="true" data-stream="true" data-header="false"></div>
 		</div>
+		</div>
 		<!---facebook like ---->
-			
+	    
+	</div>
+	<div id="footerHead">
+		</div>
 		<div id="footerdiv">
-		<img src="images/Footer.png" />
 			<div >
 				<span style="color:black;position:relative;width:99%;display:block;">AGENDA</span>
 				<ul>
@@ -586,7 +455,6 @@ function getinvoledcontentselect(id)
 				</ul>
 			</div>
 		</div>
-	</div>
 </div>
 
 <?php

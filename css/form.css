@@ -7,12 +7,12 @@
   z-index:12;
   display:none;
   color:white;
+  opacity : 0;
 }
 
 #formClose{
-  position:absolute;
-  right:22em;
-  top:2em;
+  float:right;
+  margin-bottom:10px;
 }
 
 #formContent{

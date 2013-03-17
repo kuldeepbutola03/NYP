@@ -2,6 +2,7 @@ body
 {
 margin:0px;padding:0px;
 
+	background: #f08732;
 }
 .center{
 margin-left:auto;
@@ -42,34 +43,6 @@ div#thumbwrap {
   -moz-box-shadow:    3px 3px 5px 6px #ccc;
   -webkit-box-shadow: 3px 3px 5px 6px #ccc;
   box-shadow:         3px 3px 5px 6px #ccc;
-}
-
-div#indexopen 
-{
-	background: -webkit-gradient(linear,left top, left bottom,from( #00cbac),to(#ffd672));
-	background: -moz-linear-gradient(top , #00cbac, #ffd672);
-}
-
-div#indexopen 
-{
-	margin:0px;
-	padding:0px;
-	opacity:1;
-	width:100%;
-	height:100%;
-}  
-div#imageopen
-{
-	background:url('../images/All India Trinamool Congress   Official Party Website   TMC Chairperson Mamata Banerjee   Trinamul.png') -75px 0px;
-	position:relative;
-	top:55px;
-	left:125px;
-	width:85%;height:85%;
-	border:1px solid gray; 
-
-	border-radius:5px;
-	-webkit-border-radius:5px;
-	-moz-border-radius:5px;
 }
 div#regupdatesdiv
 {
@@ -125,37 +98,23 @@ div#emailregupdateshelp
 
 div#indexwebsite
 {
-	display:none;
 	position:absolute;
 	top:0px;
 	left:0px;
-	width:100%;
-	height:1620px;
 	//border:1px solid red;
-	opacity:0;
-	background: -webkit-gradient(linear, left top, left bottom, from(#76cbdc), to(#ffffff));
-background: -moz-linear-gradient(top,  #76cbdc,  #ffffff);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#76cbdc', endColorstr='#ffffff');
-	
-}
-div#transparentskin
-{
-	opacity:0.7;
-	background-color:#FFFFDB;
-	position:absolute;
-	width:85%;height:100%;
-	margin-left:6.5em;
+	margin-left:auto;
 	margin-right:auto;
-	top:0px;
+	width:100%;
+	
 }
 div#indexwebsite2
 {
+    background-color:white;
 	position:relative;
-	margin-left:auto;
-	margin-right:auto;
 	padding:0px;
-	width:85%;
-	height:100%;
+	width:1050px;
+	height:1000px;
+	margin-top:5px;
 }
 div#indexwebsite2 > div
 {
@@ -183,18 +142,11 @@ div#imageheaderdiv
 	padding-left:0px;
 	top:3px;
 	left:0px;
-	width:100%;height:300px;
-	//background-image:url('../images/Party_Header.png');
-	-webkit-box-shadow:1px 2px 2px #888888 ;
-	border-radius:5px;
-	-webkit-border-radius:5px;
-	-moz-border-radius:5px;
+	width:1050px;height:105px;
 	
 }
 div#imageheaderdiv img
 {
-	width:100%;
-	height:100%;
 	border-radius:5px;
 	-webkit-border-radius:5px;
 	-moz-border-radius:5px;
@@ -202,17 +154,10 @@ div#imageheaderdiv img
 div#navmenudiv
 {
 	padding:0;margin:0;
-	padding-top:1.4em;
-	padding-bottom:1.4em;
-	padding-left:4em;
-	top:-20px;
-	left:10px;
 	border-radius:5px;
 	-webkit-border-radius:5px;
 	-moz-border-radius:5px;
-	background: #005CE6;
-	background: -moz-linear-gradient(top , #005CE6,#005CE6);
-	width:93%;height:50px;
+	width:1070px;
 	
 }
 
@@ -247,7 +192,7 @@ ul.navmenu a
 	display:block;
 	width:8em;
 	height:3.4em;
-	background: #005CE6;
+	background: url("../images/button.png");
 	text-decoration:none;
 	text-decoration:none;
 	color:white;
@@ -255,6 +200,12 @@ ul.navmenu a
 	font-weight:bold;
 	text-align:center;
 	line-height:3.4em;
+}
+
+ul.navmenu a:hover {
+background:url("../images/button1.png");
+width:8em;
+	height:3.4em;
 }
 ul.submenu a
 {
@@ -279,7 +230,7 @@ ul.subsubmenu li
 } 
 ul.navmenu li:hover .submenufirst
 {
-	background-color:blue;
+	background:red;
 }
 ul.subsubmenu
 {
@@ -302,7 +253,6 @@ ul.submenu  li:hover .subsubmenu
 div#newsflashdiv
 {
 	//border:1px solid gray;
-	padding-left:10px;
 	left:0px;
 	width:70.5%;height:300px;
 	margin-right:12px;
@@ -424,6 +374,11 @@ div#telecommunicationdiv
 	display:none;
 	padding-left:2%;
 }
+
+div#newsDiv {
+width:60%;
+
+}
 div#newsheader
 {
 	padding-left:2em;
@@ -433,7 +388,7 @@ div#newsheader
 	line-height:3em;
 	font-weight:bold;
 	position:relative;
-	width:60%;height:3%;
+	width:100%;height:3%;
 	top:1em;
 	//border:1px solid gray;
 	border-radius:5px;
@@ -447,7 +402,7 @@ div#newsheader
 div#news
 {
 	margin-top:2em;
-	width:63%;
+	width:100%;
 	-webkit-marquee: up small infinite scroll normal;  
 	overflow-x: -webkit-marquee;
 	//border:1px solid gray;
@@ -461,6 +416,11 @@ div#news div
 	font-family:"Georgia",Serif;
 	font-weight:bold;
 }
+div#facebookDiv{
+width:38%;
+top:3.3em;
+margin-left:1em;
+}
 div#facebookfeedsheader
 {
 	padding-left:2em;
@@ -470,7 +430,7 @@ div#facebookfeedsheader
 	line-height:3em;
 	font-weight:bold;
 	position:relative;
-	width:34%;height:3%;
+	width:80%;height:3%;
 	top:-2.3em;
 	//border:1px solid gray;
 	border-radius:5px;
@@ -482,7 +442,7 @@ div#facebookfeedsheader
 div#facebookfeeds
 {
 	//border:1px solid green;
-	width:36%;height:12%;
+	width:100%;height:12%;
 	margin-left:0.3em;
 	top:-1.2em;
 	overflow:auto;
@@ -507,12 +467,14 @@ div#footerdiv
 	padding-top:5px;
 	//border:1px solid gray;
 	padding-left:2px;
-	top:5.5em;
-	left:-12%;
-	width:124%;height:12%;
-	//background-image:url('../images/bg2.png');
+	width:1421px;height:12%;
+	background-color: #eddbc3;
 	opacity:1;
 	-webkit-box-shadow:2px 2px 2px #888888;
+	margin-bottom:0 !important;
+	position:relative;
+	float:left;
+	margin-bottom:5px;
 }
 div#footerdiv div
 {
@@ -522,16 +484,31 @@ div#footerdiv div
 	color:black;
 	text-indent:50px;
 	padding-left:5px;
+	
 }
 div#footerdiv div li
 {
 	list-style-type:none;
 }
 
-div#footerdiv img
-{
-	position:absolute;
-	top:0px;left:0px;
-	width:100%;
-	height:100%;
+#footerHead {
+height:50px;
+width:1423px;
+background-color:#f9ebd9;
+margin-bottom:0 !important;
+position:relative;
+	float:left;
+	margin-bottom:5px;
+}
+
+#leftPanel{
+position:fixed;
+left:0;
+float:left;
+top:15em;
+z-index:200;
+}
+
+#leftPanel img{
+margin-bottom:10px;
 }

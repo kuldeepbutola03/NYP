@@ -1,0 +1,61 @@
+<div id="getinvolveddiv">
+			<div id="getinvolvedcontentdiv">
+				<div id="raiseyourvoicediv">
+
+					<div id="raiseyourvoicediv2">
+					<img src="images/bright-idea.png" style="float:left;" />
+					<p style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Share Ideas</p>
+					<form action="index.php" method="post" >
+						<table align="center">
+							<tr><td>Name</td><td><input type="text" name="nameidea" /></td></tr>
+							<tr><td>Email id</td><td><input type="text" name="emailidea" /></td></tr>
+							<tr><td>Ideas</td><td><textarea rows="5" cols="20" name="idea"></textarea></td></tr>
+						</table>
+					<input type="submit" value="Submit" style="float:right;"/>
+					</form>
+					</div>
+					
+					<div id="raiseyourvoicediv1">
+					<img src="images/question.png" style="float:left;" />
+					<p>Ask a Question</p>
+					<form action="index.php" method="POST" >
+						<table align="center">
+							<tr><td>Name</td><td><input type="text" name="namequestion" /></td></tr>
+							<tr><td>Email id</td><td><input type="text" name="emailquestion" /></td></tr>
+							<tr><td>Question</td><td><textarea rows="5" cols="20" name="question"></textarea></td></tr>
+						</table>
+					<input type="submit" value="Submit" style="float:right;"/>
+					</form>
+					</div>
+					
+					<div id="raiseyourvoicediv3" style="border:0px;">
+					<img src="images/Documents-icon.png" style="float:left;"/>
+					<p>Share Documents</p>
+					<form action="index.php" method="post" enctype="multipart/form-data">
+						<table align="center">
+							<tr><td>Name</td><td><input type="text" name="namefile" /></td></tr>
+							<tr><td>Email id</td><td><input type="text" name="emailfile" /></td></tr>
+							<tr><td>File</td><td><input type="file" name="file" id="file" /></td></tr>
+							<tr><td>Details</td><td><textarea rows="3" cols="20" name="details"></textarea></td></tr>
+						</table>
+					<input type="submit" value="Submit" style="float:right;"/>
+					</form>
+					</div>
+				</div>
+				<div id="writetousdiv">
+					<center>You can write to us at:___________________________________</center>
+				</div>
+				<div id="telecommunicationdiv">
+					
+				</div>
+			</div>
+			<div id="getinvolvednavmenudiv">
+			<ul class="getinvolvednavmenu">
+				<li onclick="getinvoledcontentselect('raiseyourvoicediv');">Raise your Voice</li>
+				<li onclick="getinvoledcontentselect('writetousdiv');">Write to Us</li>
+				<li onclick="getinvoledcontentselect('telecommunicationdiv');">Telecommunication</li>
+			</ul>
+			
+			</div>
+			
+		</div>
