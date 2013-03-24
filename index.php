@@ -115,6 +115,9 @@ $xml = simplexml_load_file("news.xml")
 <html>
 <head>
 <title>National Youth Party</title>
+
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+
 <link rel="stylesheet" type="text/css" href="css/indexlayout.css" />
 <link rel="stylesheet" type="text/css" href="css/slider.css" />
 <link rel="stylesheet" type="text/css" href="css/form.css" />
@@ -171,6 +174,18 @@ function getinvoledcontentselect(id)
 		document.getElementById('telecommunicationdiv').style.display="block";
 	}
 }
+
+function appearleft(id)
+{
+
+	document.getElementById(id).style.display="block";
+}
+function disappearleft(id)
+{
+
+	document.getElementById(id).style.display="none";
+}
+
 </script>
 <script>
   $(document).ready( function(){
@@ -261,9 +276,97 @@ function getinvoledcontentselect(id)
 <!----------------------------------------------------------------------------------------------->
 <div id="fb-root"></div>
 <!----------------------------------------------------------------------------------------------->
+
+<!--------------------------invisible---------------------------->
 <div id="form">
   <a href="#" id="formClose" onclick="formClose()" >Close</a>
 </div> 
+
+			<!---div id="getinvolvedcontentdiv">
+				<div id="raiseyourvoicediv">
+
+					<div id="raiseyourvoicediv2">
+					<img src="images/bright-idea.png" style="float:left;" />
+					<p style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Share Ideas</p>
+					<form action="index.php" method="post" >
+						<table align="center">
+							<tr><td>Name</td><td><input type="text" name="nameidea" /></td></tr>
+							<tr><td>Email id</td><td><input type="text" name="emailidea" /></td></tr>
+							<tr><td>Ideas</td><td><textarea rows="5" cols="20" name="idea"></textarea></td></tr>
+						</table>
+					<input type="submit" value="Submit" style="float:right;"/>
+					</form>
+					</div>
+					
+					<div id="raiseyourvoicediv1">
+					<img src="images/question.png" style="float:left;" />
+					<p>Ask a Question</p>
+					<form action="index.php" method="POST" >
+						<table align="center">
+							<tr><td>Name</td><td><input type="text" name="namequestion" /></td></tr>
+							<tr><td>Email id</td><td><input type="text" name="emailquestion" /></td></tr>
+							<tr><td>Question</td><td><textarea rows="5" cols="20" name="question"></textarea></td></tr>
+						</table>
+					<input type="submit" value="Submit" style="float:right;"/>
+					</form>
+					</div>
+					
+					<div id="raiseyourvoicediv3" style="border:0px;">
+					<img src="images/Documents-icon.png" style="float:left;"/>
+					<p>Share Documents</p>
+					<form action="index.php" method="post" enctype="multipart/form-data">
+						<table align="center">
+							<tr><td>Name</td><td><input type="text" name="namefile" /></td></tr>
+							<tr><td>Email id</td><td><input type="text" name="emailfile" /></td></tr>
+							<tr><td>File</td><td><input type="file" name="file" id="file" /></td></tr>
+							<tr><td>Details</td><td><textarea rows="3" cols="20" name="details"></textarea></td></tr>
+						</table>
+					<input type="submit" value="Submit" style="float:right;"/>
+					</form>
+					</div>
+				</div>
+				<div id="writetousdiv">
+					<center>You can write to us at:___________________________________</center>
+				</div>
+				<div id="telecommunicationdiv">
+					
+				</div>
+			</div>
+			<div id="getinvolvednavmenudiv">
+			<ul class="getinvolvednavmenu">
+				<li onclick="getinvoledcontentselect('raiseyourvoicediv');">Raise your Voice</li>
+				<li onclick="getinvoledcontentselect('writetousdiv');">Write to Us</li>
+				<li onclick="getinvoledcontentselect('telecommunicationdiv');">Telecommunication</li>
+			</ul>
+			
+			</div--->
+			<div id="askquesdiv">
+			<img src="images/close.png" onclick="disappearleft('askquesdiv');"/>
+				<div id="askquesheader">
+					ASK YOUR QUESTION RELATED TO OUR PARTY OR ON A PARTICULAR AGENDA HERE:
+				</div>
+				<div id="askquescontent">
+					<form action="index.php" method="post">
+					<label for="question">Question:</label><br>
+					<textarea id="question" rows="10" cols="90" placeholder="enter your question here"></textarea><br>
+					<input type="submit" value="Submit Question" />
+					</form>
+				</div>
+			</div>
+			<div id="shareideadiv">
+			<img src="images/close.png" onclick="disappearleft('shareideadiv');"/>
+				<div id="shareideaheader">
+					PLACE YOUR IDEAS FOR OUR PARTY HERE:
+				</div>
+				<div id="shareideacontent">
+					<form action="index.php" method="post">
+					<label for="idea">Your Ideas:</label><br>
+					<textarea id="question" rows="10" cols="90" placeholder="enter your ideas here"></textarea><br>
+					<input type="submit" value="Submit Your Idea" />
+					</form>
+				</div>
+			</div>
+<!--------------------------invisible---------------------------->
 <div class="right">
 <div id="staticlinks">
 <a class="thumb" href="https://www.facebook.com/" target="_blank"><div class="sIfix"><img src="images/60/facebook.png"/></div></a>
@@ -275,8 +378,8 @@ function getinvoledcontentselect(id)
 </div>
 <div id="leftPanel">
   
-  <a href="#" ><img src="images/left/ask.png" /></a><br>
-  <a href="#" ><img src="images/left/share.png"/></a><br>
+  <a href="#" onclick="appearleft('askquesdiv');"><img src="images/left/ask.png"  /></a><br>
+  <a href="#" ><img src="images/left/share.png" onclick="appearleft('shareideadiv')"/></a><br>
   <a href="http://google.com"><img src="images/left/developer.png" alt="Developers"/></a>
 </div>
 </div>
@@ -288,8 +391,8 @@ function getinvoledcontentselect(id)
 	
 		
 		<div id="navmenudiv"  style="z-index:10;">
-		<ul class="navmenu">
-			<li class="menu" style="border-left:2px solid gray;"><a href="#">Home</a></li>
+		<ul class="navmenu" style="margin-left:0.3%;">
+			<li class="menu" style="border-left:2px solid #E65C00;"><a href="#">Home</a></li>
 			<li class="menu"><a href="#">About</a></li>
 			<li class="menu"><a href="#">Our Agenda&nbsp;<span style="font-size:0.8em;">&#x25BC;</span></a>
 				<ul class="submenu fix">
@@ -301,10 +404,9 @@ function getinvoledcontentselect(id)
 			</li>
 			<li class="menu"><a href="#">Organistion&nbsp;<span style="font-size:0.8em;">&#x25BC;</span></a>
 				<ul class="submenu fix">
-					<li style="padding-top:1.16em;line-height:2.5em;" class="submenufirst"><a href="#">News and Stories</a></li>
-					<li><a href="#">News and Stories</a></li>
-					<li><a href="#">News and Stories</a></li>
-					<li><a href="#">News</a></li>
+					<li style="padding-top:1.16em;line-height:2.5em;" class="submenufirst"><a href="#">Our President</a></li>
+					<li><a href="#">Our Core Committee</a></li>
+					<li><a href="#">Our State Committee</a></li>
 				</ul>
 			</li>
 			<li class="menu"><a href="#">Centres&nbsp;<span style="font-size:0.8em;">&#x25BC;</span></a>
@@ -367,25 +469,20 @@ function getinvoledcontentselect(id)
 		</div>
 		
 		<div id="newsflashdiv">
-		  <div id="sliderFrame">
-        <div id="ribbon"></div>
+		<div id="sliderFrame">
         <div id="slider">
             <a href="http://www.menucool.com/jquery-slider" target="_blank">
-                <img src="images/image-slider-1.jpg"  />
+                <img src="images/image-slider-1.png"  />
             </a>
             <img src="images/image-slider-2.jpg" />
-            <img src="images/image-slider-3.jpg" />
-            <img src="images/image-slider-4.jpg" />
-            <img src="images/image-slider-5.jpg" />
+            
         </div>
-        <div id="htmlcaption" style="display: none;">
-            <em>HTML</em> caption. Link to <a href="http://www.google.com/">Google</a>.
-        </div>
-    </div>
-
 		</div>
+		</div>
+		
 		<div id="joinformdiv">
-		<p id="openForm" onclick="joinForm();">joinform</p>
+		Any young person, believing in the working and politics of the Party, can join the party by filling up General Membership Form.
+		<p id="openForm" onclick="joinForm();" style="cursor:pointer;color:red;font-size:2em;text-align:center;">joinform</p>
 		</div>
 		<div id="newsDiv">
 		<div id="newsheader">
@@ -393,6 +490,7 @@ function getinvoledcontentselect(id)
 		</div>
 		
 		<div id="news">
+		<marquee direction="up"  scrollamount="1">
 		<?php
 		foreach($xml->news as $news)
 		{
@@ -405,11 +503,12 @@ function getinvoledcontentselect(id)
 		<?php
 		}
 		?>
+		</marquee>
 		</div>
 		</div>
 		
 		<div id="facebookDiv">
-		<div id="facebookfeedsheader">Facebook Page Feeds</div>
+		<div id="facebookfeedsheader">Facebook Page Feeds:</div>
 		
 		<div id="facebookfeeds">
 			<div class="fb-like-box" data-href="https://www.facebook.com/nyp4india?sid=0.6628177239209799" data-width="400" data-height="300" data-show-faces="true" data-stream="true" data-header="false"></div>
@@ -418,43 +517,26 @@ function getinvoledcontentselect(id)
 		<!---facebook like ---->
 	    
 	</div>
-	<div id="footerHead">
-		</div>
-		<div id="footerdiv">
-			<div >
-				<span style="color:black;position:relative;width:99%;display:block;">AGENDA</span>
-				<ul>
-					<li>Jan lokpal</li>
-					<li>Right to reject</li>
-					<li>Right to recall</li>
-					<li>Political decentralization</li>
-					<li>Rising Prices</li>
-					<li>Others</li>
-				</ul>
-			</div>
-			<div>
-				<span style="color:black;position:relative;width:99%;display:block;">OFFFICE BEARERS</span>
-				<ul>
-					<li>Arvind Kejriwal</li>
-					<li>Arvind Kejriwal</li>
-					<li>Arvind Kejriwal</li>
-					<li>Arvind Kejriwal</li>
-					<li>Arvind Kejriwal</li>
-					<li>Arvind Kejriwal</li>
-				</ul>
-			</div>
-			<div>
-				<span style="color:black;position:relative;width:99%;display:block;">AGENDA</span>
-				<ul>
-					<li>Arvind Kejriwal</li>
-					<li>Arvind Kejriwal</li>
-					<li>Arvind Kejriwal</li>
-					<li>Arvind Kejriwal</li>
-					<li>Arvind Kejriwal</li>
-					<li>Arvind Kejriwal</li>
-				</ul>
-			</div>
-		</div>
+<div id="footerdiv">
+	<div id="footercontactus">
+		<p>Contact Us at:</p>
+		<p>Mobile: +91-9415424370</p>
+		<p>Email:nyp@nationalyouthparty.co.in<br>
+		nationalyouthparty@gmail.com</p>
+	</div>
+	<div id="footerlinks">
+	<p>Links:</p>
+		<ul>
+		<li><a href="#">Home</a></li>
+		<li><a href="#">About</a></li>
+		<li><a href="#">News</a></li>
+		<li><a href="#">Gallery</a></li>
+		</ul>
+	</div>
+	<div id="footercopyright">
+		<center>All Rights Reserved by NationalYouthParty  &#169; Copyrights 2013<br>
+		Designed By <a href="#">Developers</a></center>
+	</div>
 </div>
 
 <?php
