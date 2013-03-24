@@ -11,7 +11,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9" />
 
 <link rel="stylesheet" type="text/css" href="css/template.css" />
-
+<link rel="stylesheet" type="text/css" href="css/about.css" />
 
 <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
 <script src="js/jquery-ui-1.9.2.custom.min.js" type="text/javascript"></script>
@@ -166,12 +166,12 @@ function disappearleft(id)
 		
 		<div id="navmenudiv"  style="z-index:10;">
 		<ul class="navmenu" style="margin-left:0.3%;">
-			<li class="menu" style="border-left:2px solid #E65C00;"><a href="#">Home</a></li>
-			<li class="menu"><a href="#">About</a></li>
+			<li class="menu" style="border-left:2px solid #E65C00;"><a href="index.php">Home</a></li>
+			<li class="menu"><a href="about.php">About</a></li>
 			<li class="menu"><a href="#">Our Agenda&nbsp;<span style="font-size:0.8em;">&#x25BC;</span></a>
 				<ul class="submenu fix">
 					<li style="padding-top:1.16em;line-height:2.5em;" class="submenufirst"><a href="#">General</a></li>
-					<li><a href="#">Youth</a></li>
+					<li><a href="youthagenda.php">Youth</a></li>
 					<li><a href="#">Deprived Section</a></li>
 					<li><a href="#">Common Man</a></li>
 				</ul>
@@ -187,50 +187,50 @@ function disappearleft(id)
 				<ul class="submenu fix">
 					<li style="padding-top:1.16em;line-height:2.5em;" class="submenufirst"><a href="#">North India</a>
 						<ul class="subsubmenu">
-							<li><a href="#">Jammu & Kashmir</a></li>
-							<li><a href="#">Himachal Pradesh</a></li>
-							<li><a href="#">Uttarakhand</a></li>
-							<li><a href="#">Punjab</a></li>
-							<li><a href="#">Haryana</a></li>
-							<li><a href="#">Delhi</a></li>
-							<li><a href="#">Uttar Pradesh</a></li>
-							<li><a href="#">Bihar</a></li>
+							<li><a href="centrenotavailable.php">Jammu & Kashmir</a></li>
+							<li><a href="centrenotavailable.php">Himachal Pradesh</a></li>
+							<li><a href="centrenotavailable.php">Uttarakhand</a></li>
+							<li><a href="centrenotavailable.php">Punjab</a></li>
+							<li><a href="centrenotavailable.php">Haryana</a></li>
+							<li><a href="centrenotavailable.php">Delhi</a></li>
+							<li><a href="centrenotavailable.php">Uttar Pradesh</a></li>
+							<li><a href="centrenotavailable.php">Bihar</a></li>
 						</ul>
 					</li>
 					<li><a href="#">West</a>
 						<ul class="subsubmenu">
-							<li><a href="#">Rajasthan</a></li>
-							<li><a href="#">Gujarat</a></li>
+							<li><a href="centrenotavailable.php">Rajasthan</a></li>
+							<li><a href="centrenotavailable.php">Gujarat</a></li>
 						</ul>
 					</li>
 					<li><a href="#">East</a>
 						<ul class="subsubmenu">
-							<li><a href="#">Sikkim</a></li>
-							<li><a href="#">Assam</a></li>
-							<li><a href="#">West Bengal</a></li>
-							<li><a href="#">Mizoram</a></li>
-							<li><a href="#">Meghalaya</a></li>
-							<li><a href="#">Arunachal Pradesh</a></li>
-							<li><a href="#">Tripura</a></li>
-							<li><a href="#">Nagaland</a></li>
-							<li><a href="#">Manipal</a></li>
+							<li><a href="centrenotavailable.php">Sikkim</a></li>
+							<li><a href="centrenotavailable.php">Assam</a></li>
+							<li><a href="centrenotavailable.php">West Bengal</a></li>
+							<li><a href="centrenotavailable.php">Mizoram</a></li>
+							<li><a href="centrenotavailable.php">Meghalaya</a></li>
+							<li><a href="centrenotavailable.php">Arunachal Pradesh</a></li>
+							<li><a href="centrenotavailable.php">Tripura</a></li>
+							<li><a href="centrenotavailable.php">Nagaland</a></li>
+							<li><a href="centrenotavailable.php">Manipal</a></li>
 						</ul>
 					</li>
 					<li><a href="#">South</a>
 						<ul class="subsubmenu">
-							<li><a href="#">Maharashtra</a></li>
-							<li><a href="#">Karnataka</a></li>
-							<li><a href="#">Goa</a></li>
-							<li><a href="#">Orrisa</a></li>
-							<li><a href="#">Andhra Pradesh</a></li>
-							<li><a href="#">Kerela</a></li>
-							<li><a href="#">Tamil Nadu</a></li>
+							<li><a href="centrenotavailable.php">Maharashtra</a></li>
+							<li><a href="centrenotavailable.php">Karnataka</a></li>
+							<li><a href="centrenotavailable.php">Goa</a></li>
+							<li><a href="centrenotavailable.php">Orrisa</a></li>
+							<li><a href="centrenotavailable.php">Andhra Pradesh</a></li>
+							<li><a href="centrenotavailable.php">Kerela</a></li>
+							<li><a href="centrenotavailable.php">Tamil Nadu</a></li>
 						</ul></li>
 					<li><a href="#">Central</a>
 						<ul class="subsubmenu">
-							<li><a href="#">Madhya Pradesh</a></li>
-							<li><a href="#">Jharkhand</a></li>
-							<li><a href="#">Chattisgarh</a></li>
+							<li><a href="centrenotavailable.php">Madhya Pradesh</a></li>
+							<li><a href="centrenotavailable.php">Jharkhand</a></li>
+							<li><a href="centrenotavailable.php">Chattisgarh</a></li>
 						</ul>
 					</li>
 				</ul>

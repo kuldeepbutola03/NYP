@@ -2,114 +2,6 @@
 
 @$http_referer = $_SERVER['HTTP_REFERER'];
 
-if(mysql_connect("localhost","root","") && mysql_select_db("nyp"))
-{
-	if(isset($_POST['emailregupdates']))
-	{
-		if(!empty($_POST['emailregupdates']))
-		{
-			$email=$_POST['emailregupdates'];
-			
-			$query = "SELECT id FROM regupdates WHERE email='".$email."'";
-			if($result=mysql_query($query))
-			{
-				
-				$num_rows = mysql_num_rows($result);
-				if($num_rows==0)
-				{
-					$query = "INSERT INTO regupdates VALUES(NULL,'".$email."')";
-					mysql_query($query);
-				}
-				else if($num_rows>=1)
-				{
-					echo "already registered";
-				}
-			}
-			else
-			{
-				echo mysql_error();
-			}
-		}
-	}
-	
-	if(isset($_POST['namequestion'])&&isset($_POST['emailquestion'])&&isset($_POST['question']))
-	{
-		$namequestion=$_POST['namequestion'];
-		$emailquestion=$_POST['emailquestion'];
-		$question=$_POST['question'];
-		if(!empty($namequestion)&&!empty($emailquestion)&&!empty($question))
-		{
-			$query="INSERT INTO askaquestion VALUES('NULL','".$namequestion."','".$emailquestion."','".$question."')";
-			if(mysql_query($query))
-			{
-			
-			}
-			else
-			{
-				mysql_error();
-			}
-		}
-	}
-	if(isset($_POST['nameidea'])&&isset($_POST['emailidea'])&&isset($_POST['idea']))
-	{
-		$nameidea=$_POST['nameidea'];
-		$emailidea=$_POST['emailidea'];
-		$idea=$_POST['idea'];
-		if(!empty($nameidea)&&!empty($emailidea)&&!empty($idea))
-		{
-			$query="INSERT INTO idea VALUES('NULL','".$nameidea."','".$emailidea."','".$idea."')";
-			if(mysql_query($query))
-			{}
-			else
-			{
-				mysql_error();
-			}
-		}
-	}
-	if(isset($_POST['namefile'])&&isset($_POST['emailfile']))
-	{
-		echo "in1";
-		$namefile=$_POST['namefile'];
-		$emailfile=$_POST['emailfile'];
-		$file=$_FILES['file']["name"];
-		$details=$_POST['details'];
-		if(!empty($namefile)&&!empty($emailfile)&&!empty($file))
-		{
-			$query="INSERT INTO file VALUES('NULL','".$namefile."','".$emailfile."','".$file."','".$details."')";
-			if(mysql_query($query))
-			{
-			if($_FILES["file"]["error"]>0)
-			{
-				echo "error";
-			}
-			else
-			{
-				if (file_exists("uploads/" . $_FILES["file"]["name"]))
-				{
-					echo $_FILES["file"]["name"] . " already exists. ";
-				}
-				else
-				{
-					move_uploaded_file($_FILES["file"]["tmp_name"],
-					"uploads/" . $_FILES["file"]["name"]);
-					echo "Stored in: " . "upload/" . $_FILES["file"]["name"];
-				}
-			}
-			}
-			else
-			{mysql_error();}
-		}
-		
-	}
-}
-else
-{
-	echo mysql_error();
-}
-
-?>
-<?php
-$xml = simplexml_load_file("news.xml")
 ?>
 
 <html>
@@ -118,74 +10,21 @@ $xml = simplexml_load_file("news.xml")
 
 <meta http-equiv="X-UA-Compatible" content="IE=9" />
 
-<link rel="stylesheet" type="text/css" href="css/indexlayout.css" />
-<link rel="stylesheet" type="text/css" href="css/slider.css" />
-<link rel="stylesheet" type="text/css" href="css/form.css" />
-<script src="js/js-image-slider.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="css/template.css" />
+<link rel="stylesheet" type="text/css" href="css/youthagenda.css" />
+
 <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
 <script src="js/jquery-ui-1.9.2.custom.min.js" type="text/javascript"></script>
 <script>
-
-function regexcheckemail()
-{
-	email = document.getElementById('emailregupdates').value;
-	var regex = /^[a-zA-Z0-9._-]+@[a-zA-Z]+.[a-zA-Z.]+/;
-	if(email.match(regex))
-	{
-		document.getElementById('emailregupdateshelp').style.display="none";
-		document.getElementById('regupdatesdiv').style.height="12%";
-		return true;
-		
-	}
-	else
-	{
-		document.getElementById('emailregupdateshelp').style.display="block";
-		document.getElementById('regupdatesdiv').style.height="15%";
-		return false;
-	}
-}
-
-if(window.innerWidth<=1300 &&window.innerWidth>=1100 )
-{
-	alert("hey!");
-	document.body.zoom="90%";
-}
-function getinvoledcontentselect(id)
-{
-	if(id=="raiseyourvoicediv")
-	{
-		
-		document.getElementById('raiseyourvoicediv').style.display="block";
-		document.getElementById('writetousdiv').style.display="none";
-		document.getElementById('telecommunicationdiv').style.display="none";
-	}
-	if(id=="writetousdiv")
-	{
-		
-		document.getElementById('raiseyourvoicediv').style.display="none";
-		document.getElementById('writetousdiv').style.display="block";
-		document.getElementById('telecommunicationdiv').style.display="none";
-	}
-	if(id=="telecommunicationdiv")
-	{
-		
-		document.getElementById('raiseyourvoicediv').style.display="none";
-		document.getElementById('writetousdiv').style.display="none";
-		document.getElementById('telecommunicationdiv').style.display="block";
-	}
-}
-
 function appearleft(id)
 {
 
-	$("#" + id).show();
-	$("#" + id).animate({opacity: 1, display: "block" }, "slow");
+	document.getElementById(id).style.display="block";
 }
 function disappearleft(id)
 {
-   $('#' + id).hide("slow", function(){
-	  $('#' + id).css('opacity', '0');
-	});
+
+	document.getElementById(id).style.display="none";
 }
 
 </script>
@@ -275,73 +114,6 @@ function disappearleft(id)
 </head>
 
 <body >
-<!----------------------------------------------------------------------------------------------->
-<div id="fb-root"></div>
-<!----------------------------------------------------------------------------------------------->
-
-<!--------------------------invisible---------------------------->
-<div id="form">
-  <a href="#" id="formClose" onclick="formClose()" >Close</a>
-</div> 
-
-			<!---div id="getinvolvedcontentdiv">
-				<div id="raiseyourvoicediv">
-
-					<div id="raiseyourvoicediv2">
-					<img src="images/bright-idea.png" style="float:left;" />
-					<p style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Share Ideas</p>
-					<form action="index.php" method="post" >
-						<table align="center">
-							<tr><td>Name</td><td><input type="text" name="nameidea" /></td></tr>
-							<tr><td>Email id</td><td><input type="text" name="emailidea" /></td></tr>
-							<tr><td>Ideas</td><td><textarea rows="5" cols="20" name="idea"></textarea></td></tr>
-						</table>
-					<input type="submit" value="Submit" style="float:right;"/>
-					</form>
-					</div>
-					
-					<div id="raiseyourvoicediv1">
-					<img src="images/question.png" style="float:left;" />
-					<p>Ask a Question</p>
-					<form action="index.php" method="POST" >
-						<table align="center">
-							<tr><td>Name</td><td><input type="text" name="namequestion" /></td></tr>
-							<tr><td>Email id</td><td><input type="text" name="emailquestion" /></td></tr>
-							<tr><td>Question</td><td><textarea rows="5" cols="20" name="question"></textarea></td></tr>
-						</table>
-					<input type="submit" value="Submit" style="float:right;"/>
-					</form>
-					</div>
-					
-					<div id="raiseyourvoicediv3" style="border:0px;">
-					<img src="images/Documents-icon.png" style="float:left;"/>
-					<p>Share Documents</p>
-					<form action="index.php" method="post" enctype="multipart/form-data">
-						<table align="center">
-							<tr><td>Name</td><td><input type="text" name="namefile" /></td></tr>
-							<tr><td>Email id</td><td><input type="text" name="emailfile" /></td></tr>
-							<tr><td>File</td><td><input type="file" name="file" id="file" /></td></tr>
-							<tr><td>Details</td><td><textarea rows="3" cols="20" name="details"></textarea></td></tr>
-						</table>
-					<input type="submit" value="Submit" style="float:right;"/>
-					</form>
-					</div>
-				</div>
-				<div id="writetousdiv">
-					<center>You can write to us at:___________________________________</center>
-				</div>
-				<div id="telecommunicationdiv">
-					
-				</div>
-			</div>
-			<div id="getinvolvednavmenudiv">
-			<ul class="getinvolvednavmenu">
-				<li onclick="getinvoledcontentselect('raiseyourvoicediv');">Raise your Voice</li>
-				<li onclick="getinvoledcontentselect('writetousdiv');">Write to Us</li>
-				<li onclick="getinvoledcontentselect('telecommunicationdiv');">Telecommunication</li>
-			</ul>
-			
-			</div--->
 			<div id="askquesdiv">
 			<img src="images/close.png" onclick="disappearleft('askquesdiv');"/>
 				<div id="askquesheader">
@@ -469,54 +241,20 @@ function disappearleft(id)
 		</ul>
 		
 		</div>
+		<div id="content">
+		<strong>Our Youth Agenda</strong><br>
 		
-		<div id="newsflashdiv">
-		<div id="sliderFrame">
-        <div id="slider">
-            <a href="http://www.menucool.com/jquery-slider" target="_blank">
-                <img src="images/image-slider-1.png"  />
-            </a>
-            <img src="images/image-slider-2.jpg" />
-            
-        </div>
-		</div>
-		</div>
+		<p>Today, Youth look for inspiration to Ideals, at the time of taking important decisions. National Youth Party has chosen Youth Icon Swami Vivekananda, who never fails to inspire the Indian Youth and Guru Govind Singh Ji, who made unparalleled sacrifice as its Ideals and Inspiring Leaders.</p>
 		
-		<div id="joinformdiv">
-		Any young person, believing in the working and politics of the Party, can join the party by filling up General Membership Form.
-		<p id="openForm" onclick="joinForm();" style="cursor:pointer;color:red;font-size:2em;text-align:center;">joinform</p>
-		</div>
-		<div id="newsDiv">
-		<div id="newsheader">
-		NEWS:
-		</div>
+		<p>National Youth Party has chosen these two great souls as Inspiring Ideals of the Party:</p>
 		
-		<div id="news">
-		<marquee direction="up"  scrollamount="1">
-		<?php
-		foreach($xml->news as $news)
-		{
-		?>
-			<div>
-			<?php
-			echo "Dated: <span style='color:red;'>".$news->dated."</span> - ".$news->content;
-			?>
-			</div>
-		<?php
-		}
-		?>
-		</marquee>
-		</div>
-		</div>
+		<p><strong>Swami Vivekananda</strong>, in his youth made India proud all over the world by his deep knowledge, character and progressing Nationalism and inspired Indians to a new Renaissance. He made the Youth of his day look at their despair, dependency, illiteracy n customs, suggesting ways and means to counter them.</p>
 		
-		<div id="facebookDiv">
-		<div id="facebookfeedsheader">Facebook Page Feeds:</div>
-		
-		<div id="facebookfeeds">
-			<div class="fb-like-box" data-href="https://www.facebook.com/nyp4india?sid=0.6628177239209799" data-width="400" data-height="300" data-show-faces="true" data-stream="true" data-header="false"></div>
+		<p><strong>Guru Govind Singh Ji Maharaj</strong> did not accept the sovereignty of the Moguls nor forsook his society and sacrificed his sons before his own eyes. Our history is full of people, who sacrificed every thing for their country, but Guru Govind Singh Ji made the supreme sacrifice of his sons for the noble cause. Today, we can just imagine about a father, who has such a big heart and who was so full of Nationalism. Such sacrifice of Shri Guru Govind Singh Ji will keep on inspiring Indian Youth always.</p>
+
+		Work culture of National Youth Party is based on clarity of thought and friendship. Whosoever is elder in age and responsibility in the party should be respected, so that the younger in the part get love, affection and cooperation in return. Making this as guiding principle, National Youth Party is working from a small village to the National level. With the expansion of this work culture, we are trying to unite the Youth of this great Country. Youth are friendly, who to-gather can solve every problem facing the Nation. The youth can work towards party’s goal of forming a Young Parliament. Party is committed to achieve its target within the given time frame. Whole of the Party work is based on designated target, designated time and designated person. Party has named this work culture as ‘Friendly, Frankly, Time Bound and Result Oriented’.
+		<center><img src="images/youthagenda/flag.jpg" height="200" width="200"></center><br>
 		</div>
-		</div>
-		<!---facebook like ---->
 	    
 	</div>
 <div id="footerdiv">
@@ -541,22 +279,6 @@ function disappearleft(id)
 	</div>
 </div>
 
-<?php
-if($http_referer=="http://localhost/nyp/index.php")
-{
-?>
-<script>
-loadsecond();
-function loadsecond()
-{
-	document.getElementById('indexopen').style.display="none";
-	document.getElementById('indexwebsite').style.display="block";
-	document.getElementById('indexwebsite').style.opacity="1";
-}
-</script>
-<?php
-}
-?>
 
 </body>
 
