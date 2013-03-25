@@ -19,14 +19,18 @@
 function appearleft(id)
 {
 
-	document.getElementById(id).style.display="block";
+	$("#" + id).show();
+	$("#" + id).animate({opacity: 1, display: "block" }, "slow");
+
 }
 function disappearleft(id)
 {
 
-	document.getElementById(id).style.display="none";
-}
+	  $('#' + id).hide("slow", function(){
+  $('#' + id).css('opacity', '0');
+	});
 
+}
 </script>
 <script>
   $(document).ready( function(){
