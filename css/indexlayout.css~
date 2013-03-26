@@ -45,6 +45,7 @@ div#askquesdiv
 	box-shadow:0 0 1em;
 	
 	display:none;
+	opacity: 0;
 }
 div#askquesdiv img 
 {
@@ -52,8 +53,15 @@ div#askquesdiv img
 	top:-1em;left:97%;
 	cursor:pointer;
 }
+div#askquesdiv textarea
+{
+	width:90%;
+	height:25%;
+	
+}
 div#shareideadiv
 {
+	opacity: 0;
 	padding:1em;
 	position:fixed;
 	top:30%;left:20%;
@@ -79,7 +87,12 @@ div#shareideadiv img
 	top:-1em;left:97%;
 	cursor:pointer;
 }
-
+div#shareideadiv textarea
+{
+	width:90%;
+	height:25%;
+	
+}
 
 
 div#thumbwrap {
@@ -423,7 +436,7 @@ div#footerlinks
 {
 	float:left;
 	width:57.5%;height:50%;
-	padding:0.2em 0 0 1em;
+	padding:0.1em 0 0.2em 1em;
 	-webkit-box-shadow:0 0 5px #888888;
 	-moz-box-shadow:0 0 5px #888888;
 	-o-box-shadow:0 0 5px #888888;
@@ -439,15 +452,23 @@ div#footerlinks ul
 div#footerlinks ul li
 {
 	float:left;
-	
+	margin-right:3em;
 }
 div#footerlinks ul li a
 {
 	text-decoration:none;
 	display:block;
-	width:6em;height:3em;
+	text-align:center;
+	width:4em;height:3em;
 	font-weight:bold;
-	color:black;
+	line-height:3em;
+	color:#000080;
+	background:url('../images/indianflag.jpg');
+	
+	-webkit-border-radius:25px;
+	-moz-border-radius:25px;
+	-o-border-radius:25px;
+	border-radius:25px;
 }
 div#footercopyright
 {
