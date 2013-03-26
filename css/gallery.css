@@ -1,0 +1,9 @@
+div#gallery
+{
+	padding:2em;
+}
+div#gallery div 
+{
+	width:48%;height:300px;
+	float:left;
+}

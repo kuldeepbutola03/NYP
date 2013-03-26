@@ -126,8 +126,12 @@ function disappearleft(id)
 				<div id="askquescontent">
 					<form action="index.php" method="post">
 					<label for="question">Question:</label><br>
-					<textarea id="question" rows="10" cols="90" placeholder="enter your question here"></textarea><br>
-					<input type="submit" value="Submit Question" />
+					<textarea id="question"  placeholder="enter your question here"></textarea><br>
+					<label for="questionname">Name:</label>
+					<input type="text" id="questionname" placeholder="Your Name" /><br>
+					<label for="questionemail" id="questionemail"  >Email:</label>
+					<input type="text" id="questionemail" id="questionemail" placeholder="Your Email" /> 
+					<input type="submit" value="Submit Question" id="submitquestion"/>
 					</form>
 				</div>
 			</div>
@@ -139,8 +143,12 @@ function disappearleft(id)
 				<div id="shareideacontent">
 					<form action="index.php" method="post">
 					<label for="idea">Your Ideas:</label><br>
-					<textarea id="question" rows="10" cols="90" placeholder="enter your ideas here"></textarea><br>
-					<input type="submit" value="Submit Your Idea" />
+					<textarea id="question"  placeholder="enter your ideas here"></textarea><br>
+					<label for="sharename">Name:</label>
+					<input type="text" id="sharename" placeholder="Your Name" /><br>
+					<label for="shareemail" id="shareemail" placeholder="Your Email" >Email:</label>
+					<input type="text" id="questionemail" id="questionemail" placeholder="Your Email" />
+					<input type="submit" value="Submit Your Idea" id="sharesubmit"/>
 					</form>
 				</div>
 			</div>
@@ -156,8 +164,8 @@ function disappearleft(id)
 </div>
 <div id="leftPanel">
   
-  <a href="#" onclick="appearleft('askquesdiv');"><img src="images/left/ask.png"  /></a><br>
-  <a href="#" ><img src="images/left/share.png" onclick="appearleft('shareideadiv')"/></a><br>
+  <a href="JavaScript:void(0);" onclick="appearleft('askquesdiv');"><img src="images/left/ask.png"  /></a><br>
+  <a href="JavaScript:void(0);" ><img src="images/left/share.png" onclick="appearleft('shareideadiv')"/></a><br>
   <a href="http://google.com"><img src="images/left/developer.png" alt="Developers"/></a>
 </div>
 </div>
@@ -172,24 +180,24 @@ function disappearleft(id)
 		<ul class="navmenu" style="margin-left:0.3%;">
 			<li class="menu" style="border-left:2px solid #E65C00;"><a href="index.php">Home</a></li>
 			<li class="menu"><a href="about.php">About</a></li>
-			<li class="menu"><a href="#">Our Agenda&nbsp;<span style="font-size:0.8em;">&#x25BC;</span></a>
+			<li class="menu"><a href="JavaScript:void(0);">Our Agenda&nbsp;<span style="font-size:0.8em;">&#x25BC;</span></a>
 				<ul class="submenu fix">
-					<li style="padding-top:1.16em;line-height:2.5em;" class="submenufirst"><a href="#">General</a></li>
+					<li style="padding-top:1.16em;line-height:2.5em;" class="submenufirst"><a href="JavaScript:void(0);">General</a></li>
 					<li><a href="youthagenda.php">Youth</a></li>
-					<li><a href="#">Deprived Section</a></li>
-					<li><a href="#">Common Man</a></li>
+					<li><a href="JavaScript:void(0);">Deprived Section</a></li>
+					<li><a href="JavaScript:void(0);">Common Man</a></li>
 				</ul>
 			</li>
-			<li class="menu"><a href="#">Organistion&nbsp;<span style="font-size:0.8em;">&#x25BC;</span></a>
+			<li class="menu"><a href="JavaScript:void(0);">Organistion&nbsp;<span style="font-size:0.8em;">&#x25BC;</span></a>
 				<ul class="submenu fix">
-					<li style="padding-top:1.16em;line-height:2.5em;" class="submenufirst"><a href="#">Our President</a></li>
-					<li><a href="#">Our Core Committee</a></li>
-					<li><a href="#">Our State Committee</a></li>
+					<li style="padding-top:1.16em;line-height:2.5em;" class="submenufirst"><a href="JavaScript:void(0);">Our President</a></li>
+					<li><a href="JavaScript:void(0);">Our Core Committee</a></li>
+					<li><a href="JavaScript:void(0);">Our State Committee</a></li>
 				</ul>
 			</li>
-			<li class="menu"><a href="#">Centres&nbsp;<span style="font-size:0.8em;">&#x25BC;</span></a>
+			<li class="menu"><a href="JavaScript:void(0);">Centres&nbsp;<span style="font-size:0.8em;">&#x25BC;</span></a>
 				<ul class="submenu fix">
-					<li style="padding-top:1.16em;line-height:2.5em;" class="submenufirst"><a href="#">North India</a>
+					<li style="padding-top:1.16em;line-height:2.5em;" class="submenufirst"><a href="JavaScript:void(0);">North India</a>
 						<ul class="subsubmenu">
 							<li><a href="centrenotavailable.php">Jammu & Kashmir</a></li>
 							<li><a href="centrenotavailable.php">Himachal Pradesh</a></li>
@@ -201,13 +209,13 @@ function disappearleft(id)
 							<li><a href="centrenotavailable.php">Bihar</a></li>
 						</ul>
 					</li>
-					<li><a href="#">West</a>
+					<li><a href="JavaScript:void(0);">West</a>
 						<ul class="subsubmenu">
 							<li><a href="centrenotavailable.php">Rajasthan</a></li>
 							<li><a href="centrenotavailable.php">Gujarat</a></li>
 						</ul>
 					</li>
-					<li><a href="#">East</a>
+					<li><a href="JavaScript:void(0);">East</a>
 						<ul class="subsubmenu">
 							<li><a href="centrenotavailable.php">Sikkim</a></li>
 							<li><a href="centrenotavailable.php">Assam</a></li>
@@ -220,7 +228,7 @@ function disappearleft(id)
 							<li><a href="centrenotavailable.php">Manipal</a></li>
 						</ul>
 					</li>
-					<li><a href="#">South</a>
+					<li><a href="JavaScript:void(0);">South</a>
 						<ul class="subsubmenu">
 							<li><a href="centrenotavailable.php">Maharashtra</a></li>
 							<li><a href="centrenotavailable.php">Karnataka</a></li>
@@ -230,7 +238,7 @@ function disappearleft(id)
 							<li><a href="centrenotavailable.php">Kerela</a></li>
 							<li><a href="centrenotavailable.php">Tamil Nadu</a></li>
 						</ul></li>
-					<li><a href="#">Central</a>
+					<li><a href="JavaScript:void(0);">Central</a>
 						<ul class="subsubmenu">
 							<li><a href="centrenotavailable.php">Madhya Pradesh</a></li>
 							<li><a href="centrenotavailable.php">Jharkhand</a></li>
@@ -239,9 +247,9 @@ function disappearleft(id)
 					</li>
 				</ul>
 			</li>
-			<li class="menu"><a href="#">News</a></li>
-			<li class="menu"><a href="#">Gallery</a></li>
-			<li class="menu"><a href="#">Contact Us</a></li>
+			<li class="menu"><a href="JavaScript:void(0);">News</a></li>
+			<li class="menu"><a href="gallery.php">Gallery</a></li>
+			<li class="menu"><a href="JavaScript:void(0);">Contact Us</a></li>
 		</ul>
 		
 		</div>
@@ -395,15 +403,15 @@ function disappearleft(id)
 	<div id="footerlinks">
 	<p>Links:</p>
 		<ul>
-		<li><a href="#">Home</a></li>
-		<li><a href="#">About</a></li>
-		<li><a href="#">News</a></li>
-		<li><a href="#">Gallery</a></li>
+		<li><a href="JavaScript:void(0);">Home</a></li>
+		<li><a href="JavaScript:void(0);">About</a></li>
+		<li><a href="JavaScript:void(0);">News</a></li>
+		<li><a href="JavaScript:void(0);">Gallery</a></li>
 		</ul>
 	</div>
 	<div id="footercopyright">
 		<center>All Rights Reserved by NationalYouthParty  &#169; Copyrights 2013<br>
-		Designed By <a href="#">Developers</a></center>
+		Designed By <a href="JavaScript:void(0);">Developers</a></center>
 	</div>
 </div>
 

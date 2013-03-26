@@ -2,114 +2,6 @@
 
 @$http_referer = $_SERVER['HTTP_REFERER'];
 
-if(mysql_connect("localhost","root","") && mysql_select_db("nyp"))
-{
-	if(isset($_POST['emailregupdates']))
-	{
-		if(!empty($_POST['emailregupdates']))
-		{
-			$email=$_POST['emailregupdates'];
-			
-			$query = "SELECT id FROM regupdates WHERE email='".$email."'";
-			if($result=mysql_query($query))
-			{
-				
-				$num_rows = mysql_num_rows($result);
-				if($num_rows==0)
-				{
-					$query = "INSERT INTO regupdates VALUES(NULL,'".$email."')";
-					mysql_query($query);
-				}
-				else if($num_rows>=1)
-				{
-					echo "already registered";
-				}
-			}
-			else
-			{
-				echo mysql_error();
-			}
-		}
-	}
-	
-	if(isset($_POST['namequestion'])&&isset($_POST['emailquestion'])&&isset($_POST['question']))
-	{
-		$namequestion=$_POST['namequestion'];
-		$emailquestion=$_POST['emailquestion'];
-		$question=$_POST['question'];
-		if(!empty($namequestion)&&!empty($emailquestion)&&!empty($question))
-		{
-			$query="INSERT INTO askaquestion VALUES('NULL','".$namequestion."','".$emailquestion."','".$question."')";
-			if(mysql_query($query))
-			{
-			
-			}
-			else
-			{
-				mysql_error();
-			}
-		}
-	}
-	if(isset($_POST['nameidea'])&&isset($_POST['emailidea'])&&isset($_POST['idea']))
-	{
-		$nameidea=$_POST['nameidea'];
-		$emailidea=$_POST['emailidea'];
-		$idea=$_POST['idea'];
-		if(!empty($nameidea)&&!empty($emailidea)&&!empty($idea))
-		{
-			$query="INSERT INTO idea VALUES('NULL','".$nameidea."','".$emailidea."','".$idea."')";
-			if(mysql_query($query))
-			{}
-			else
-			{
-				mysql_error();
-			}
-		}
-	}
-	if(isset($_POST['namefile'])&&isset($_POST['emailfile']))
-	{
-		echo "in1";
-		$namefile=$_POST['namefile'];
-		$emailfile=$_POST['emailfile'];
-		$file=$_FILES['file']["name"];
-		$details=$_POST['details'];
-		if(!empty($namefile)&&!empty($emailfile)&&!empty($file))
-		{
-			$query="INSERT INTO file VALUES('NULL','".$namefile."','".$emailfile."','".$file."','".$details."')";
-			if(mysql_query($query))
-			{
-			if($_FILES["file"]["error"]>0)
-			{
-				echo "error";
-			}
-			else
-			{
-				if (file_exists("uploads/" . $_FILES["file"]["name"]))
-				{
-					echo $_FILES["file"]["name"] . " already exists. ";
-				}
-				else
-				{
-					move_uploaded_file($_FILES["file"]["tmp_name"],
-					"uploads/" . $_FILES["file"]["name"]);
-					echo "Stored in: " . "upload/" . $_FILES["file"]["name"];
-				}
-			}
-			}
-			else
-			{mysql_error();}
-		}
-		
-	}
-}
-else
-{
-	echo mysql_error();
-}
-
-?>
-<?php
-$xml = simplexml_load_file("news.xml")
 ?>
 
 <html>
@@ -118,38 +10,13 @@ $xml = simplexml_load_file("news.xml")
 
 <meta http-equiv="X-UA-Compatible" content="IE=9" />
 
-<link rel="stylesheet" type="text/css" href="css/indexlayout.css" />
-<link rel="stylesheet" type="text/css" href="css/slider.css" />
-<link rel="stylesheet" type="text/css" href="css/form.css" />
-<script src="js/js-image-slider.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="css/template.css" />
+<link rel="stylesheet" type="text/css" href="css/gallery.css" />
+
+
 <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
 <script src="js/jquery-ui-1.9.2.custom.min.js" type="text/javascript"></script>
 <script>
-function getinvoledcontentselect(id)
-{
-	if(id=="raiseyourvoicediv")
-	{
-		
-		document.getElementById('raiseyourvoicediv').style.display="block";
-		document.getElementById('writetousdiv').style.display="none";
-		document.getElementById('telecommunicationdiv').style.display="none";
-	}
-	if(id=="writetousdiv")
-	{
-		
-		document.getElementById('raiseyourvoicediv').style.display="none";
-		document.getElementById('writetousdiv').style.display="block";
-		document.getElementById('telecommunicationdiv').style.display="none";
-	}
-	if(id=="telecommunicationdiv")
-	{
-		
-		document.getElementById('raiseyourvoicediv').style.display="none";
-		document.getElementById('writetousdiv').style.display="none";
-		document.getElementById('telecommunicationdiv').style.display="block";
-	}
-}
-
 function appearleft(id)
 {
 
@@ -165,7 +32,6 @@ function disappearleft(id)
 	});
 
 }
-
 </script>
 <script>
   $(document).ready( function(){
@@ -253,14 +119,6 @@ function disappearleft(id)
 </head>
 
 <body >
-<!----------------------------------------------------------------------------------------------->
-<div id="fb-root"></div>
-<!----------------------------------------------------------------------------------------------->
-
-<!--------------------------invisible---------------------------->
-<div id="form">
-  <a href="#" id="formClose" onclick="formClose()" >Close</a>
-</div> 
 			<div id="askquesdiv">
 			<img src="images/close.png" onclick="disappearleft('askquesdiv');"/>
 				<div id="askquesheader">
@@ -316,7 +174,7 @@ function disappearleft(id)
   <div id="imageheaderdiv" class="center"> 
 		<img src="./images/header.png">
 		</div>
-	<div id="indexwebsite2" style="background-color:#ffffff" class="center">
+	<div id="indexwebsite2" style="background-color:#ffffff;" class="center">
 	
 		
 		<div id="navmenudiv"  style="z-index:10;">
@@ -396,54 +254,31 @@ function disappearleft(id)
 		</ul>
 		
 		</div>
-		
-		<div id="newsflashdiv">
-		<div id="sliderFrame">
-        <div id="slider">
-            <a href="http://www.menucool.com/jquery-slider" target="_blank">
-                <img src="images/image-slider-1.png"  />
-            </a>
-            <img src="images/image-slider-2.jpg" />
-            
-        </div>
-		</div>
-		</div>
-		
-		<div id="joinformdiv">
-		Any young person, believing in the working and politics of the Party, can join the party by filling up General Membership Form.
-		<p id="openForm" onclick="joinForm();" style="cursor:pointer;color:red;font-size:2em;text-align:center;">joinform</p>
-		</div>
-		<div id="newsDiv">
-		<div id="newsheader">
-		NEWS:
-		</div>
-		
-		<div id="news">
-		<marquee direction="up"  scrollamount="1">
-		<?php
-		foreach($xml->news as $news)
-		{
-		?>
-			<div>
+		<div id="content">
+		<div id="gallery">
 			<?php
-			echo "Dated: <span style='color:red;'>".$news->dated."</span> - ".$news->content;
+			$imgcount=0;
+			$imgnames=scandir("images/gallery");
+			foreach ($imgnames as $image)
+			{
+				if($image=='.'||$image=='..'||is_dir('images/'.$image))
+				{
+				continue;
+				}
+				else
+				{
+				$imagetitle = explode(".",$image);
+				?>
+				<div id='image<?php echo ++$imgcount;?>'>
+				<img src='<?php echo "images/gallery/".$image; ?>' style="width:98%;height:200px;" alt='<?php echo "national youth party /".$imagetitle[0];?>'/><br>
+				<?php echo "Title:".$imagetitle[0];?></div>
+				<?php
+				}
+			}
+			
 			?>
-			</div>
-		<?php
-		}
-		?>
-		</marquee>
 		</div>
 		</div>
-		
-		<div id="facebookDiv">
-		<div id="facebookfeedsheader">Facebook Page Feeds:</div>
-		
-		<div id="facebookfeeds">
-			<div class="fb-like-box" data-href="https://www.facebook.com/nyp4india?sid=0.6628177239209799" data-width="400" data-height="300" data-show-faces="true" data-stream="true" data-header="false"></div>
-		</div>
-		</div>
-		<!---facebook like ---->
 	    
 	</div>
 <div id="footerdiv">
@@ -468,22 +303,6 @@ function disappearleft(id)
 	</div>
 </div>
 
-<?php
-if($http_referer=="http://localhost/nyp/index.php")
-{
-?>
-<script>
-loadsecond();
-function loadsecond()
-{
-	document.getElementById('indexopen').style.display="none";
-	document.getElementById('indexwebsite').style.display="block";
-	document.getElementById('indexwebsite').style.opacity="1";
-}
-</script>
-<?php
-}
-?>
 
 </body>
 
