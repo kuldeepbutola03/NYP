@@ -183,9 +183,9 @@ function disappearleft(id)
 			<li class="menu"><a href="about.php">About</a></li>
 			<li class="menu"><a href="JavaScript:void(0);">Our Agenda&nbsp;<span style="font-size:0.8em;">&#x25BC;</span></a>
 				<ul class="submenu fix">
-					<li style="padding-top:1.16em;line-height:2.5em;" class="submenufirst"><a href="JavaScript:void(0);">General</a></li>
+					<li style="padding-top:1.16em;line-height:2.5em;" class="submenufirst"><a href="generalagenda.php">General</a></li>
 					<li><a href="youthagenda.php">Youth</a></li>
-					<li><a href="JavaScript:void(0);">Deprived Section</a></li>
+					<li><a href="agendaforfarmer.php">Deprived Section</a></li>
 					<li><a href="JavaScript:void(0);">Common Man</a></li>
 				</ul>
 			</li>

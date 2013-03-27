@@ -182,9 +182,9 @@ function disappearleft(id)
 			<li class="menu"><a href="about.php">About</a></li>
 			<li class="menu"><a href="JavaScript:void(0);">Our Agenda&nbsp;<span style="font-size:0.8em;">&#x25BC;</span></a>
 				<ul class="submenu fix">
-					<li style="padding-top:1.16em;line-height:2.5em;" class="submenufirst"><a href="generalagenda.php">General</a></li>
+					<li style="padding-top:1.16em;line-height:2.5em;" class="submenufirst"><a href="JavaScript:void(0);">General</a></li>
 					<li><a href="youthagenda.php">Youth</a></li>
-					<li><a href="JavaScript:void(0);">Deprived Section</a></li>
+					<li><a href="agendaforfarmer.php">Deprived Section</a></li>
 					<li><a href="JavaScript:void(0);">Common Man</a></li>
 				</ul>
 			</li>
@@ -254,21 +254,24 @@ function disappearleft(id)
 		
 		</div>
 		<div id="content">
-		<center><h2>Our Youth Agenda</h2></center>
+		<center><h2>Our Agenda For Farmers</h2></center>
+		<ol>
+		<li> Party favors the creation of a ‘National Farmer Authority’ to analyze the input costs and fix the support of their produce.</li>
+		<li>‘Support Price’ for the farming produce should consider input & labour cost plus profit @25%.</li>
+		<li> Farmers should get the opportunity of selling their farming produce at the Support Price through out the year.</li>
+		<li>Every Development Block should have a Cold-storage and a Warehouse for the farmers to store their farm produce.</li>
+		<li>Income from agricultural farming and animal husbandry should be free from tax of any kind.</li>
+		<li>Loans far advance agricultural implements should be available on minimum rate of   interest.</li>
+		<li>With the growth of population, the average farm holding is shrinking and with growth of cities & urbanization, more & more agricultural land is being converted into residential areas. The national Youth party thinks of formulating a ‘National Policy’ on the issue of growing urbanization and stop  conversion of agricultural land into residential area.</li>
 		
-		<p>Today, Youth look for inspiration to Ideals, at the time of taking important decisions. National Youth Party has chosen Youth Icon Swami Vivekananda, who never fails to inspire the Indian Youth and Guru Govind Singh Ji, who made unparalleled sacrifice as its Ideals and Inspiring Leaders.</p>
-		
-		<p>National Youth Party has chosen these two great souls as Inspiring Ideals of the Party:</p>
-		
-		<p><strong>Swami Vivekananda</strong>, in his youth made India proud all over the world by his deep knowledge, character and progressing Nationalism and inspired Indians to a new Renaissance. He made the Youth of his day look at their despair, dependency, illiteracy n customs, suggesting ways and means to counter them.</p>
-		
-		<p><strong>Guru Govind Singh Ji Maharaj</strong> did not accept the sovereignty of the Moguls nor forsook his society and sacrificed his sons before his own eyes. Our history is full of people, who sacrificed every thing for their country, but Guru Govind Singh Ji made the supreme sacrifice of his sons for the noble cause. Today, we can just imagine about a father, who has such a big heart and who was so full of Nationalism. Such sacrifice of Shri Guru Govind Singh Ji will keep on inspiring Indian Youth always.</p>
-
-		Work culture of National Youth Party is based on clarity of thought and friendship. Whosoever is elder in age and responsibility in the party should be respected, so that the younger in the part get love, affection and cooperation in return. Making this as guiding principle, National Youth Party is working from a small village to the National level. With the expansion of this work culture, we are trying to unite the Youth of this great Country. Youth are friendly, who to-gather can solve every problem facing the Nation. The youth can work towards party’s goal of forming a Young Parliament. Party is committed to achieve its target within the given time frame. Whole of the Party work is based on designated target, designated time and designated person. Party has named this work culture as ‘Friendly, Frankly, Time Bound and Result Oriented’.
-		<center><img src="images/youthagenda/flag.jpg" height="200" width="200"></center><br>
-		</div>
+		</ol>
+		<center>
+	    <img src="images/agendaforfarmer/e-Choupal1.jpg" /><br><br>
+		<img src="images/agendaforfarmer/Slide4-e1345040134855.jpg" />
+		</center>
 	    
-	</div>
+		</div>
+		</div>
 <div id="footerdiv">
 	<div id="footercontactus">
 		<p>Contact Us at:</p>

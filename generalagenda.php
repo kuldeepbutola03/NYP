@@ -184,7 +184,7 @@ function disappearleft(id)
 				<ul class="submenu fix">
 					<li style="padding-top:1.16em;line-height:2.5em;" class="submenufirst"><a href="generalagenda.php">General</a></li>
 					<li><a href="youthagenda.php">Youth</a></li>
-					<li><a href="JavaScript:void(0);">Deprived Section</a></li>
+					<li><a href="agendaforfarmer.php">Deprived Section</a></li>
 					<li><a href="JavaScript:void(0);">Common Man</a></li>
 				</ul>
 			</li>
@@ -254,20 +254,24 @@ function disappearleft(id)
 		
 		</div>
 		<div id="content">
-		<center><h2>Our Youth Agenda</h2></center>
-		
-		<p>Today, Youth look for inspiration to Ideals, at the time of taking important decisions. National Youth Party has chosen Youth Icon Swami Vivekananda, who never fails to inspire the Indian Youth and Guru Govind Singh Ji, who made unparalleled sacrifice as its Ideals and Inspiring Leaders.</p>
-		
-		<p>National Youth Party has chosen these two great souls as Inspiring Ideals of the Party:</p>
-		
-		<p><strong>Swami Vivekananda</strong>, in his youth made India proud all over the world by his deep knowledge, character and progressing Nationalism and inspired Indians to a new Renaissance. He made the Youth of his day look at their despair, dependency, illiteracy n customs, suggesting ways and means to counter them.</p>
-		
-		<p><strong>Guru Govind Singh Ji Maharaj</strong> did not accept the sovereignty of the Moguls nor forsook his society and sacrificed his sons before his own eyes. Our history is full of people, who sacrificed every thing for their country, but Guru Govind Singh Ji made the supreme sacrifice of his sons for the noble cause. Today, we can just imagine about a father, who has such a big heart and who was so full of Nationalism. Such sacrifice of Shri Guru Govind Singh Ji will keep on inspiring Indian Youth always.</p>
+		<center><h2>Our Agenda</h2></center>
+		<p>Almost all Political Parties make the most of their Youth Power through their ‘Youth Wings’, whose main function is to organize rallies, picketing, sit in, demonstration, gathering crowds for electioneering and slogan shouting etc. But, when it comes to taking decisions, giving tickets for fighting elections or becoming a minister after elections, youth are neither consulted nor are they given any important role to play . And if at all, it is given to youth ! Just think, whom these roles are given to. Have a close look at the main National  Political Parties or State political parties of today and their Youth Leadership. Look at the background of their youth leaders, you will be surprised to see that most of these youth leaders are scion of  Chief of the Political Party or scion of the Top Leaders of these Parties or scion of Prominent Business Houses of the Country.</p>
 
-		Work culture of National Youth Party is based on clarity of thought and friendship. Whosoever is elder in age and responsibility in the party should be respected, so that the younger in the part get love, affection and cooperation in return. Making this as guiding principle, National Youth Party is working from a small village to the National level. With the expansion of this work culture, we are trying to unite the Youth of this great Country. Youth are friendly, who to-gather can solve every problem facing the Nation. The youth can work towards party’s goal of forming a Young Parliament. Party is committed to achieve its target within the given time frame. Whole of the Party work is based on designated target, designated time and designated person. Party has named this work culture as ‘Friendly, Frankly, Time Bound and Result Oriented’.
-		<center><img src="images/youthagenda/flag.jpg" height="200" width="200"></center><br>
-		</div>
+        <p>Now, a real big question comes. Can a youth having the background of a commoner enter the Parliament ? Can the son of a poor farmer from village cross the doors of Parliament ?  Whether Indian Democracy really requires the crutches of economic prosperity, political background and organized crime.</p>
+
+        <p>National Youth Party comes with a visionary answers to all these questions. The main target of the Party is a Young Parliament or a Parliament full of young people. The Party has vowed and committed to this pious goal. Can a common youth without economic prosperity, political backing, or criminal one-upmanship enter Parliament. Yes, he can and the National Youth Party aims at sending this common youth to the Parliament.</p>
+		
+		<h3>Our Ideals</h3>
+		<p>Today, Youth look for inspiration to Ideals, at the time of taking important decisions. National Youth Party has chosen Youth Icon Swami Vivekananda, who never fails to inspire the Indian Youth and Guru Govind Singh Ji, who made unparalleled sacrifice as its Ideals and Inspiring Leaders.</p>
+
+		<p>Swami Vivekananda, in his youth made India proud all over the world by his deep knowledge, character and progressing Nationalism and inspired Indians to a new Renaissance. He made the Youth of his day look at their despair, dependency, illiteracy n customs, suggesting ways and means to counter them.</p>
+
+		<p>Guru Govind Singh Ji Maharaj did not accept the sovereignty of the Moguls nor forsook his society and sacrificed his sons before his own eyes. Our history is full of people, who sacrificed every thing for their country, but Guru Govind Singh Ji made the supreme sacrifice of his sons for the noble cause. Today, we can just imagine about a father, who has such a big heart and who was so full of Nationalism. Such sacrifice of Shri Guru Govind Singh Ji will keep on inspiring Indian Youth always.</p>
+
+		<p>National Youth Party has chosen these two great souls as Inspiring Ideals of the Party.</p>
+
 	    
+		</div>
 	</div>
 <div id="footerdiv">
 	<div id="footercontactus">
