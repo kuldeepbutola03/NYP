@@ -240,7 +240,6 @@ function disappearleft(id)
 	 
   }
 </script>
-<script>
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -249,7 +248,6 @@ function disappearleft(id)
   js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-</script>
 </head>
 
 <body >
@@ -440,7 +438,7 @@ function disappearleft(id)
 		<div id="facebookfeedsheader">Facebook Page Feeds:</div>
 		
 		<div id="facebookfeeds">
-			<div class="fb-like-box" data-href="https://www.facebook.com/nyp4india?sid=0.6628177239209799" data-width="400" data-height="300" data-show-faces="true" data-stream="true" data-header="false"></div>
+			<div class="fb-like-box" data-href="https://www.facebook.com/nyp4india" data-width="392" data-show-faces="true" data-stream="true" data-header="true"></div>
 		</div>
 		</div>
 		<!---facebook like ---->
