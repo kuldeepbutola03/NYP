@@ -409,7 +409,7 @@ function disappearleft(id)
 		
 		<div id="joinformdiv">
 		Any young person, believing in the working and politics of the Party, can join the party by filling up General Membership Form.
-		<p id="openForm" onclick="joinForm();" style="cursor:pointer;color:red;font-size:2em;text-align:center;">joinform</p>
+		<p id="openForm" onclick="joinForm();" style="cursor:pointer;color:red;font-size:2em;text-align:center;">Join Form</p>
 		</div>
 		<div id="newsDiv">
 		<div id="newsheader">
