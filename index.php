@@ -408,11 +408,13 @@ function disappearleft(id)
 		</div>
 		
 		<div id="joinformdiv">
+		<img src="images/Wraper_Joinus.png" />
 		Any young person, believing in the working and politics of the Party, can join the party by filling up General Membership Form.
 		<p id="openForm" onclick="joinForm();" style="cursor:pointer;color:red;font-size:2em;text-align:center;">Join Form</p>
 		</div>
 		<div id="newsDiv">
 		<div id="newsheader">
+		<img src="images/Wraper_News.png" />
 		NEWS:
 		</div>
 		
@@ -435,10 +437,15 @@ function disappearleft(id)
 		</div>
 		
 		<div id="facebookDiv">
-		<div id="facebookfeedsheader">Facebook Page Feeds:</div>
+		<div id="facebookfeedsheader"><img src="images/Wraper_FaceBook_Feeds.png" /></div>
 		
 		<div id="facebookfeeds">
-			<div class="fb-like-box" data-href="https://www.facebook.com/nyp4india" data-width="392" data-show-faces="true" data-stream="true" data-header="true"></div>
+			<div class="fb-like-box" data-href="https://www.facebook.com/nyp4india" data-width="392" data-show-faces="true" data-stream="true" data-header="true" style="height:60%;overflow:hidden;"></div>
+			<br><a class="twitter-timeline" href="https://twitter.com/abhinavdtu2012" data-widget-id="318215215080669186">Tweets by @abhinavdtu2012</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+			
+
 		</div>
 		</div>
 		<!---facebook like ---->
