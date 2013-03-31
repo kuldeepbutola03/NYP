@@ -369,8 +369,10 @@ div#newsheader img
 div#news
 {
 	margin-top:2em;
-	width:100%;
-	border-bottom:1px solid gray;
+	width:105%;
+	border:1px solid gray;
+	margin-left: 10px;
+	border-radius: 5px;
 }
 div#news div
 {
