@@ -12,10 +12,40 @@
 
 <link rel="stylesheet" type="text/css" href="css/template.css" />
 <link rel="stylesheet" type="text/css" href="css/gallery.css" />
+<!-- Add jQuery library -->
+<script type="text/javascript" src="jquery-1.9.0.min.js"></script>
+
+<!-- Add mousewheel plugin (this is optional) -->
+<script type="text/javascript" src="jquery.mousewheel-3.0.6.pack.js"></script>
+
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="jquery.fancybox.css" type="text/css" media="screen" />
+<script type="text/javascript" src="jquery.fancybox.pack.js"></script>
+
+<!-- Optionally add helpers - button, thumbnail and/or media -->
 
 
-<script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
-<script src="js/jquery-ui-1.9.2.custom.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="jquery.fancybox-thumbs.css" type="text/css" media="screen" />
+<script type="text/javascript" src="jquery.fancybox-thumbs.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+	$(".fancybox").fancybox({
+		prevEffect	: 'none',
+		nextEffect	: 'none',
+		helpers	: {
+			title	: {
+				type: 'outside'
+			},
+			thumbs	: {
+				width	: 50,
+				height	: 50
+			}
+		}
+	});
+});
+</script>
+
+
 <script>
 function appearleft(id)
 {
@@ -270,7 +300,7 @@ function disappearleft(id)
 				$imagetitle = explode(".",$image);
 				?>
 				<div id='image<?php echo ++$imgcount;?>'>
-				<img src='<?php echo "images/gallery/".$image; ?>' style="width:98%;height:200px;" alt='<?php echo "national youth party /".$imagetitle[0];?>'/><br>
+				<a href='<?php echo "images/gallery/".$image; ?>' rel ="group" class="fancybox" ><img src='<?php echo "images/gallery/".$image; ?>' style="width:98%;height:200px;" alt='<?php echo "national youth party /".$imagetitle[0];?>'/></a><br>
 				<?php echo "Title:".$imagetitle[0];?></div>
 				<?php
 				}
