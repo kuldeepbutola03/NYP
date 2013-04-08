@@ -122,8 +122,14 @@ $xml = simplexml_load_file("news.xml")
 <link rel="stylesheet" type="text/css" href="css/slider.css" />
 <link rel="stylesheet" type="text/css" href="css/form.css" />
 <script src="js/js-image-slider.js" type="text/javascript"></script>
-<script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
-<script src="js/jquery-ui-1.9.2.custom.min.js" type="text/javascript"></script>
+
+
+<!-- Add jQuery library -->
+<script type="text/javascript" src="jquery-1.9.0.min.js"></script>
+
+
+
+
 <script>
 function getinvoledcontentselect(id)
 {
@@ -314,7 +320,7 @@ function disappearleft(id)
   <div id="imageheaderdiv" > 
 		<img src="./images/Header_3.png" >
 		</div>
-	<div id="indexwebsite2" style="background-color:#ffffff" class="center">
+	<div id="indexwebsite2" style="background-color:#ffffff;" class="center">
 	
 		
 		<div id="navmenudiv"  style="z-index:10;">
@@ -398,18 +404,15 @@ function disappearleft(id)
 		<div id="newsflashdiv">
 		<div id="sliderFrame">
         <div id="slider">
-            <a href="http://www.menucool.com/jquery-slider" target="_blank">
-                <img src="images/image-slider-1.png"  />
-            </a>
+            <img src="images/image-slider-1.png"  />
             <img src="images/image-slider-2.jpg" />
-            
         </div>
 		</div>
 		</div>
 		
 		<div id="joinformdiv">
-		<img src="images/Wraper_Joinus.png" id="joinusgeader" />
-		Any young person, believing in the working and politics of the Party, can join the party by filling up General Membership Form.<br>
+		<img src="images/Wraper_Joinus.png" id="joinusgeader" /><font face="tahoma">
+		Any young person, believing in the working and politics of the Party, can join the party by filling up General Membership Form.</font><br>
 		<img href="images/Join_Us.png" id="openForm" onclick="joinForm();" style="cursor:pointer;width:30%;height:20%;" />
 		</div>
 		<div id="newsDiv">
@@ -449,8 +452,8 @@ function disappearleft(id)
 		</div>
 		</div>
 		<!---facebook like ---->
-	    <div id="fancy-box">
-			
+	    <div >
+		    
 		</div>
 	</div>
 <div id="footerdiv">
@@ -476,6 +479,7 @@ function loadsecond()
 <?php
 }
 ?>
+
 
 </body>
 

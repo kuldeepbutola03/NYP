@@ -170,19 +170,19 @@ function disappearleft(id)
 </div>
 </div>
 <div id="indexwebsite">
-  <div id="imageheaderdiv" class="center"> 
-		<img src="./images/header.png">
+  <div id="imageheaderdiv" > 
+		<img src="./images/Header_3.png" >
 		</div>
 	<div id="indexwebsite2" style="background-color:#ffffff" class="center">
 	
 		
 		<div id="navmenudiv"  style="z-index:10;">
 		<ul class="navmenu" style="margin-left:0.3%;">
-			<li class="menu" style="border-left:2px solid #E65C00;"><a href="index.php">Home</a></li>
+			<li class="menu" style=""><a href="index.php">Home</a></li>
 			<li class="menu"><a href="about.php">About</a></li>
 			<li class="menu"><a href="JavaScript:void(0);">Our Agenda&nbsp;<span style="font-size:0.8em;">&#x25BC;</span></a>
 				<ul class="submenu fix">
-					<li style="padding-top:1.16em;line-height:2.5em;" class="submenufirst"><a href="generalagenda.php">General</a></li>
+					<li style="line-height:2.5em;" class="submenufirst"><a href="generalagenda.php">General</a></li>
 					<li><a href="youthagenda.php">Youth</a></li>
 					<li><a href="agendaforfarmer.php">Deprived Section</a></li>
 					<li><a href="JavaScript:void(0);">Common Man</a></li>
@@ -190,14 +190,14 @@ function disappearleft(id)
 			</li>
 			<li class="menu"><a href="JavaScript:void(0);">Organistion&nbsp;<span style="font-size:0.8em;">&#x25BC;</span></a>
 				<ul class="submenu fix">
-					<li style="padding-top:1.16em;line-height:2.5em;" class="submenufirst"><a href="JavaScript:void(0);">Our President</a></li>
+					<li style="line-height:2.5em;" class="submenufirst"><a href="JavaScript:void(0);">Our President</a></li>
 					<li><a href="JavaScript:void(0);">Our Core Committee</a></li>
 					<li><a href="JavaScript:void(0);">Our State Committee</a></li>
 				</ul>
 			</li>
 			<li class="menu"><a href="JavaScript:void(0);">Centres&nbsp;<span style="font-size:0.8em;">&#x25BC;</span></a>
 				<ul class="submenu fix">
-					<li style="padding-top:1.16em;line-height:2.5em;" class="submenufirst"><a href="JavaScript:void(0);">North India</a>
+					<li style="line-height:2.5em;" class="submenufirst"><a href="JavaScript:void(0);">North India</a>
 						<ul class="subsubmenu">
 							<li><a href="centrenotavailable.php">Jammu & Kashmir</a></li>
 							<li><a href="centrenotavailable.php">Himachal Pradesh</a></li>
@@ -394,23 +394,8 @@ function disappearleft(id)
 	    
 	</div>
 <div id="footerdiv">
-	<div id="footercontactus">
-		<p>Contact Us at:</p>
-		<p>Mobile: +91-9415424370</p>
-		<p>Email:nyp@nationalyouthparty.co.in<br>
-		nationalyouthparty@gmail.com</p>
-	</div>
-	<div id="footerlinks">
-	<p>Links:</p>
-		<ul>
-		<li><a href="JavaScript:void(0);">Home</a></li>
-		<li><a href="JavaScript:void(0);">About</a></li>
-		<li><a href="JavaScript:void(0);">News</a></li>
-		<li><a href="JavaScript:void(0);">Gallery</a></li>
-		</ul>
-	</div>
 	<div id="footercopyright">
-		<center>All Rights Reserved by NationalYouthParty  &#169; Copyrights 2013<br>
+		<center>All Rights Reserved by <b>NationalYouthParty</b>  &#169; Copyrights 2013<br>
 		Designed By <a href="JavaScript:void(0);">Developers</a></center>
 	</div>
 </div>

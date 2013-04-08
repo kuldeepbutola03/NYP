@@ -1,8 +1,9 @@
+*{font-family:tahoma;}
 body
 {
 margin:0px;padding:0px;
 
-background: #f7c789;
+background: #f08732;
 }
 .center{
 margin-left:auto;
@@ -183,7 +184,8 @@ div#indexwebsite2
 	padding-bottom:4em;
 	width:1050px;
 	height:1088px;
-	margin-top:0px;
+	
+	
 }
 div#indexwebsite2 > div
 {
@@ -259,6 +261,9 @@ ul.navmenu > li >a
 {
 	
 	background: -webkit-linear-gradient(top, #879301 0%,#687001 100%);
+	background: -moz-linear-gradient(top, #879301 0%,#687001 100%);
+	background: -o-linear-gradient(top, #879301 0%,#687001 100%);
+	
 }
 ul.navmenu li > a:hover
 {
@@ -454,11 +459,13 @@ div#facebookfeeds img
 	left:30%;
 }
 
-div#fancy-box
+div#vid_gallery
 {
 	border:1px solid gray;
-	top:-20%;
-	width:20%;height:20%;
+	top:-40%;
+	width:607px;
+	height:400px;
+	margin-left:10px;
 }
 
 

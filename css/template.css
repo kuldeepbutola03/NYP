@@ -1,8 +1,9 @@
+*{font-family:tahoma;}
 body
 {
 margin:0px;padding:0px;
 
-background: #f08732;
+background:  #f08732;
 }
 .center{
 margin-left:auto;
@@ -31,8 +32,8 @@ div#askquesdiv
 	position:fixed;
 	top:30%;left:20%;
 	width:60%;height:40%;
-	z-index:10;
-	
+	z-index:20;
+	opacity:0;
 	background-color:#FFFFFF;
 	-webkit-border-radius:0.4em;
 	-moz-border-radius:0.4em;
@@ -65,8 +66,8 @@ div#shareideadiv
 	position:fixed;
 	top:30%;left:20%;
 	width:60%;height:40%;
-	z-index:10;
-	
+	z-index:20;
+	opacity:0;
 	background-color:#FFFFFF;
 	-webkit-border-radius:0.4em;
 	-moz-border-radius:0.4em;
@@ -132,7 +133,7 @@ div#indexwebsite2
 	padding-bottom:4em;
 	width:1050px;
 	overflow:auto;
-	margin-top:5px;
+
 }
 div#indexwebsite2 > div
 {
@@ -150,13 +151,7 @@ div#imageheaderdiv
 	width:1050px;height:105px;
 	
 }
-div#imageheaderdiv img
-{
-	border-radius:5px;
-	-webkit-border-radius:5px;
-	-moz-border-radius:5px;
-	-o-border-radius:5px;
-}
+
 div#navmenudiv
 {
 	padding:0;margin:0;
@@ -187,7 +182,7 @@ ul.navmenu li
 
 ul.navmenu > li
 {
-	border-right:2px solid #E65C00;
+	border-right:2px solid gray;
 	
 }
 ul.navmenu a
@@ -195,7 +190,7 @@ ul.navmenu a
 	display:block;
 	width:100%;
 	height:3.4em;
-	background: url("../images/button.png");
+	background: rgb(117, 117, 117);
 	text-decoration:none;
 	text-decoration:none;
 	color:white;
@@ -204,6 +199,22 @@ ul.navmenu a
 	text-align:center;
 	line-height:3.4em;
 }
+ul.navmenu > li >a
+{
+	
+	background: -webkit-linear-gradient(top, #879301 0%,#687001 100%);
+	background: -moz-linear-gradient(top, #879301 0%,#687001 100%);
+	background: -o-linear-gradient(top, #879301 0%,#687001 100%);
+}
+ul.navmenu li > a:hover
+{
+	background:rgb(145, 143, 143);
+}
+ul.submenu li
+{
+	height:2em;
+	line-height:2em;
+}
 ul.submenu a
 {
 	width:12em;
@@ -211,6 +222,8 @@ ul.submenu a
 	-webkit-border-radius:0.4em;
 	-moz-border-radius:0.4em;
 	-o-border-radius:0.4em;
+	height:2em;
+	line-height:2em;
 }
 ul.fix {
   width:12em;
@@ -218,11 +231,11 @@ ul.fix {
 
 ul.submenu li
 {
-	padding-top:3px;
+	padding-top:1px;
 }
 .submenufirst
 {
-	background-color:#FF6600;
+	background-color:rgb(117,117,117);
 }
 li.submenufirst > a
 {
@@ -234,7 +247,7 @@ li.submenufirst > a
 ul.subsubmenu li
 {
 	left:12.1em;
-	top:-3.5em;
+	top:-2.05em;
 } 
 ul.subsubmenu
 {
@@ -262,78 +275,23 @@ div#footerdiv
 {
 	position:relative;
 	top:-1%;
-	
 	margin:0;
 	padding:0.4em 0 0 0.4em;
-	width:99.5%;height:12%;
+	width:99.5%;height:5%;
 	background-color: #eddbc3;
 	
-	-webkit-box-shadow:2px 2px 2px #888888;
-	-moz-box-shadow:2px 2px 2px #888888;
-	-o-box-shadow:2px 2px 2px #888888;
-	box-shadow:2px 2px 2px #888888;
 	overflow:hidden;
 }
-div#footercontactus
-{
-	float:left;
-	width:40%;height:97%;
-	padding:0.1em 0 0.1em 1em;
-	-webkit-box-shadow:0 0 5px #888888;
-	-moz-box-shadow:0 0 5px #888888;
-	-o-box-shadow:0 0 5px #888888;
-	box-shadow:0 0 5px #888888;
-}
-div#footerlinks
-{
-	float:left;
-	width:57.5%;height:50%;
-	padding:0.2em 0 0 1em;
-	-webkit-box-shadow:0 0 5px #888888;
-	-moz-box-shadow:0 0 5px #888888;
-	-o-box-shadow:0 0 5px #888888;
-	box-shadow:0 0 5px #888888;
-}
-div#footerlinks ul 
-{
-	margin:0;padding:0;
-	margin-left:2em;
-	
-	list-style-type:none;
-}
-div#footerlinks ul li
-{
-	float:left;
-	margin-right:3em;
-}
-div#footerlinks ul li a
-{
-	text-decoration:none;
-	display:block;
-	text-align:center;
-	width:4em;height:3em;
-	font-weight:bold;
-	line-height:3em;
-	color:#000080;
-	background:url('../images/indianflag.jpg');
-	
-	-webkit-border-radius:25px;
-	-moz-border-radius:25px;
-	-o-border-radius:25px;
-	border-radius:25px;
-}
-
 div#footercopyright
 {
 	float:left;
-	width:58.2%;height:45%;
+	width:99.3%;height:99%;
 	padding:0.2em;
 	-webkit-box-shadow:0 0 5px #888888;
 	-moz-box-shadow:0 0 5px #888888;
 	-o-box-shadow:0 0 5px #888888;
 	box-shadow:0 0 5px #888888;
 }
-
 
 
 #leftPanel{
