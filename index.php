@@ -320,7 +320,7 @@ function disappearleft(id)
   <div id="imageheaderdiv" > 
 		<img src="./images/Header_3.png" >
 		</div>
-	<div id="indexwebsite2" style="background-color:#ffffff;" class="center">
+	<div id="indexwebsite2" class="center shadow">
 	
 		
 		<div id="navmenudiv"  style="z-index:10;">
@@ -442,7 +442,7 @@ function disappearleft(id)
 		<div id="facebookDiv">
 		<div id="facebookfeedsheader"><img src="images/Wraper_FaceBook_Feeds.png" /></div>
 		
-		<div id="facebookfeeds">
+		<div id="facebookfeeds" style="background-color:white;">
 			<div class="fb-like-box" data-href="https://www.facebook.com/nyp4india" data-width="392" data-show-faces="true" data-stream="true" data-header="true" style="height:60%;overflow:hidden;"></div>
 			<br><a class="twitter-timeline" href="https://twitter.com/abhinavdtu2012" data-widget-id="318215215080669186">Tweets by @abhinavdtu2012</a>
 			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
