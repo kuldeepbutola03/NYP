@@ -178,7 +178,7 @@ div#indexwebsite
 }
 div#indexwebsite2
 {
-    background-color:rgb(233, 233, 233);
+    background-color:#ffffff;
 	position:relative;
 	padding:0px;
 	padding-bottom:4em;
@@ -213,7 +213,7 @@ div#imageheaderdiv
 }*/
 div#navmenudiv
 {
-	padding:0;margin:0;
+	padding:0;margin-left:2px;
 	border-radius:5px;
 	-webkit-border-radius:5px;
 	-moz-border-radius:5px;
@@ -352,6 +352,8 @@ div#joinformdiv
 	text-align:center;
 	font-family:"Georgia",Serif;
 	
+	
+	
 }
 img#joinusgeader
 {
@@ -390,12 +392,15 @@ div#newsheader img
 }
 div#news
 {
-	margin-top:2em;
+	margin-top:1.4em;
 	width:105%;
 	border:1px solid gray;
 	margin-left: 10px;
-	border-radius: 5px;
+	/*border-radius: 5px;*/
+	border-left:none;
+	border-right:none;
 	background-color:white;
+	
 }
 div#news div
 {
@@ -405,6 +410,7 @@ div#news div
 	border-bottom:1px solid gray;
 	font-family:"Georgia",Serif;
 	font-weight:bold;
+	
 }
 
 div#facebookDiv{
@@ -461,18 +467,27 @@ div#facebookfeeds img
 	left:30%;
 }
 
-div#vid_gallery
+div#cloudgallery
 {
-	border:1px solid gray;
-	top:-40%;
-	width:607px;
-	height:400px;
-	margin-left:10px;
+display:inline-block;
+background:rgb(160, 160, 173);
+border:1px solid gray;
+margin-top:-36.5%;
+margin-left:10px;
+width:607px ;
+height:400px;
 }
+.video
+{
+margin:10px;
+margin-right:-5px;
 
-
-
-
+}
+#vgallery
+{
+margin-top:-41%;
+margin-left:-1.53%;
+}
 
 div#footerdiv
 {
@@ -510,8 +525,3 @@ z-index:200;
 margin-bottom:10px;
 }
 
-.shadow {
-  -moz-box-shadow:    3px 3px 5px 6px #ccc;
-  -webkit-box-shadow: 3px 3px 5px 6px #ccc;
-  box-shadow:         3px 3px 5px 6px #ccc;
-}

@@ -194,7 +194,7 @@ function disappearleft(id)
   
   <a href="JavaScript:void(0);" onclick="appearleft('askquesdiv');"><img src="images/left/ask.png"  /></a><br>
   <a href="JavaScript:void(0);" ><img src="images/left/share.png" onclick="appearleft('shareideadiv')"/></a><br>
-  <a href="http://google.com"><img src="images/left/developer.png" alt="Developers"/></a>
+  <a href="devs/index.html"><img src="images/left/developer.png" alt="Developers"/></a>
 </div>
 </div>
 <div id="indexwebsite">
@@ -296,7 +296,7 @@ function disappearleft(id)
 				{
 				$imagetitle = explode(".",$image);
 				?>
-				<div id='image<?php echo ++$imgcount;?>'>
+				<div id='image<?php echo ++$imgcount;?>' style="padding:14px;" >
 				<a href='<?php echo "images/gallery/".$image; ?>' rel="group" class="fancybox"><img src='<?php echo "images/gallery/".$image; ?>' style="width:98%;height:200px;border:10px solid #66cccc;border-style:groove;" alt='<?php echo "national youth party /".$imagetitle[0];?>'/></a><br>
 				<?php echo "Title:".$imagetitle[0];?></div>
 				<?php
@@ -311,7 +311,7 @@ function disappearleft(id)
 <div id="footerdiv">
 	<div id="footercopyright">
 		<center>All Rights Reserved by <b>NationalYouthParty</b>  &#169; Copyrights 2013<br>
-		Designed By <a href="JavaScript:void(0);">Developers</a></center>
+		Designed By <a href="devs/index.html">Developers</a></center>
 	</div>
 </div>
 

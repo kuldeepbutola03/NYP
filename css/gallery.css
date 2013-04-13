@@ -4,6 +4,9 @@ div#gallery
 }
 div#gallery div 
 {
-	width:48%;height:300px;
+	width:44%;
+	height:300px;
+	margin:10px;
 	float:left;
+	
 }

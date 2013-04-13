@@ -126,6 +126,37 @@ $xml = simplexml_load_file("news.xml")
 
 <!-- Add jQuery library -->
 <script type="text/javascript" src="jquery-1.9.0.min.js"></script>
+<!-- Add jQuery library -->
+<script type="text/javascript" src="jquery-1.9.0.min.js"></script>
+
+<!-- Add mousewheel plugin (this is optional) -->
+<script type="text/javascript" src="jquery.mousewheel-3.0.6.pack.js"></script>
+
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="jquery.fancybox.css" type="text/css" media="screen" />
+<script type="text/javascript" src="jquery.fancybox.pack.js"></script>
+<link rel="stylesheet" href="jquery.fancybox-thumbs.css" type="text/css" media="screen" />
+<script type="text/javascript" src="jquery.fancybox-thumbs.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+	$(".fancybox").fancybox({
+		prevEffect	: 'none',
+		nextEffect	: 'none',
+		helpers	: {
+			title	: {
+				type: 'outside'
+			},
+			thumbs	: {
+				width	: 50,
+				height	: 50
+			}
+		}
+	});
+});
+</script>
+
+
+<script src="js/jquery-ui-1.9.2.custom.min.js" type="text/javascript"></script>
 
 
 
@@ -305,22 +336,21 @@ function disappearleft(id)
 <a class="thumb" href="https://www.facebook.com/" target="_blank"><div class="sIfix"><img src="images/60/facebook.png"/></div></a>
 <a class="thumb" href="https://www.twitter.com/" target="_blank"><img src="images/60/twitter.png" /></a>
 <a class="thumb" href="https://www.youtube.com/" target="_blank"><img src="images/60/youtube.png" /></a>
-<a class="thumb" href="https://www.youtube.com/" target="_blank"><img src="images/60/feed.png" /></a>
-<a class="thumb" href="https://www.google.com/" target="_blank"><img src="images/60/google.png" /></a>
+
 
 </div>
 <div id="leftPanel">
   
   <a href="JavaScript:void(0);" onclick="appearleft('askquesdiv');"><img src="images/left/ask.png"  /></a><br>
   <a href="JavaScript:void(0);" ><img src="images/left/share.png" onclick="appearleft('shareideadiv')"/></a><br>
-  <a href="http://google.com"><img src="images/left/developer.png" alt="Developers"/></a>
+  <a href="devs/index.html"><img src="images/left/developer.png" alt="Developers"/></a>
 </div>
 </div>
 <div id="indexwebsite">
   <div id="imageheaderdiv" > 
 		<img src="./images/Header_3.png" >
 		</div>
-	<div id="indexwebsite2" class="center shadow">
+	<div id="indexwebsite2" class="center ">
 	
 		
 		<div id="navmenudiv"  style="z-index:10;">
@@ -411,9 +441,9 @@ function disappearleft(id)
 		</div>
 		
 		<div id="joinformdiv">
-		<img src="images/Wraper_Joinus.png" id="joinusgeader" /><font face="tahoma">
-		Any young person, believing in the working and politics of the Party, can join the party by filling up General Membership Form.</font><br>
-		<img href="images/Join_Us.png" id="openForm" onclick="joinForm();" style="cursor:pointer;width:30%;height:20%;" />
+		<img href="images/Join_Us.png" id="openForm" onclick="joinForm();" style="cursor:pointer;width:30%;height:20%; z-index:30;height:80px;width:40px;" />
+		<img src="images/Wraper_Joinus.png" id="joinusgeader" />
+		
 		</div>
 		<div id="newsDiv">
 		<div id="newsheader">
@@ -421,7 +451,7 @@ function disappearleft(id)
 		NEWS:
 		</div>
 		
-		<div id="news">
+		<div id="news" background="Background.png">
 		<marquee direction="up"  scrollamount="1">
 		<?php
 		foreach($xml->news as $news)
@@ -444,22 +474,26 @@ function disappearleft(id)
 		
 		<div id="facebookfeeds" style="background-color:white;">
 			<div class="fb-like-box" data-href="https://www.facebook.com/nyp4india" data-width="392" data-show-faces="true" data-stream="true" data-header="true" style="height:60%;overflow:hidden;"></div>
-			<br><a class="twitter-timeline" href="https://twitter.com/abhinavdtu2012" data-widget-id="318215215080669186">Tweets by @abhinavdtu2012</a>
-			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+			<br><a class="twitter-timeline" href="https://twitter.com/nyp4india" data-widget-id="323009534601871360">Tweets by @nyp4india</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+		
 
 			
 
 		</div>
 		</div>
 		<!---facebook like ---->
-	    <div >
-		    
-		</div>
+		<div id="vgallery"><img src="images/Wraper_Video.png" /></div>
+	    <div id="cloudgallery">
+		<iframe class="video" width="587" height="380" src="http://www.youtube.com/embed/8GOjqLeISsk" frameborder="0" allowfullscreen scrolling ="no"></iframe>
+        
+        </div>
+
 	</div>
 <div id="footerdiv">
 	<div id="footercopyright">
 		<center>All Rights Reserved by <b>NationalYouthParty</b>  &#169; Copyrights 2013<br>
-		Designed By <a href="JavaScript:void(0);">Developers</a></center>
+		Designed By <a href="devs/index.html">Developers</a></center>
 	</div>
 </div>
 
